@@ -13,7 +13,7 @@ export class ActorEntity{
     @Column({type: 'varchar', length:40})
     apellidos: string;
     
-    @Column({type: 'varchar'})
+    @Column({type: 'varchar', length:10})
     fechaNacimiento?: string;
 
     @Column({type: 'int'})
