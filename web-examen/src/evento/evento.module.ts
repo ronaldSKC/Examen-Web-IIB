@@ -13,6 +13,6 @@ import { EventoController } from "./evento.controller";
     exports: [EventoService],
 })
 
-export class ActorModule {
+export class EventoModule {
 
 } 

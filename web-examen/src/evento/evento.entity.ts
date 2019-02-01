@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, ManyToMany, JoinTable } from "typeorm";
+import { PeliculaEntity } from "src/pelicula/pelicula.entity";
 
 @Entity('evento')
 export class EventoEntity{

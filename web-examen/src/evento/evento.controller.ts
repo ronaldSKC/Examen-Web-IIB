@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post, Body, Delete, Req, BadRequestException, Put } from "@nestjs/common";
+import { Controller, Get, Param, Post, Body, Delete, Req } from "@nestjs/common";
 import { EventoCreateDto } from "src/actor/actor-create-dto/actor-create.dto";
 import { EventoUpdateDto } from "./evento-update-dto/evento-update.dto";
 import { EventoService } from "./evento.service";

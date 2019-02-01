@@ -6,11 +6,14 @@ import { ActorEntity } from './actor/actor.entity';
 import { ActorModule } from './actor/actor.module';
 import { PeliculaModule } from './pelicula/pelicula.module';
 import { PeliculaEntity } from './pelicula/pelicula.entity';
+import { EventoModule } from './evento/evento.module';
+import { EventoEntity } from './evento/evento.entity';
 
 @Module({
   imports: [
     ActorModule,
     PeliculaModule,
+    EventoModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
@@ -19,9 +22,11 @@ import { PeliculaEntity } from './pelicula/pelicula.entity';
       password: '12345678',
       database: 'web-2018',
       synchronize: true,
+      dropSchema: false,
       entities: [
         ActorEntity,
-        PeliculaEntity
+        PeliculaEntity,
+        EventoEntity
       ],
     })
   ],
