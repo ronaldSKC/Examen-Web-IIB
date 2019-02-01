@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,
+          user-scalable=no,
+          initial-scale=1.0,
+          maximum-scale=1.0,
+          minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h1>Actor</h1>
+            <p></p>
+            <form action="/actor/crear"
+                  method="POST">
+                <div>
+                    <label for="nombre">Nombres</label>
+                    <input type="text" id="nombre" name="nombre">
+                </div>
+                <div>
+                    <label for="apellido">Apellidos</label>
+                    <input type="text" id="apellido" name="apellido">
+                </div>
+                <div>
+                    <label for="fecha_nacimiento">Fecha de Naciemiento</label>
+                    <input type="text" id="fecha_nacimiento" name="fecha_nacimiento">
+                </div>
+                <div>
+                    <label for="numero_peliculas">Número de Peliculas</label>
+                    <input type="number" id="numero_peliculas" name="numero_peliculas">
+                </div>
+                <div>
+                    <label for="retirado">Retirado</label>
+                    <select name="retirado" id="retirado">
+                        <option value="opcion_retirado">Si</option>
+                        <option value="opcion_retirado">No</option>
+                    </select>
+                </div>
+               
+                <button>Crear</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
