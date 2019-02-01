@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from "typeorm";
+import { PeliculaEntity } from "src/pelicula/pelicula.entity";
 
 @Entity('actor')
 export class ActorEntity{
@@ -20,5 +21,8 @@ export class ActorEntity{
 
     @Column({type: 'boolean'})
     retirado: boolean;
+
+    @OneToMany(type => PeliculaEntity, pelicula => pelicula.actor)
+    pelicula: PeliculaEntity[];
 
 }

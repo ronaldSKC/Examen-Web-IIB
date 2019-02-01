@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from "typeorm";
+import { ActorEntity } from "src/actor/actor.entity";
 
 @Entity('pelicula')
 export class PeliculaEntity{
@@ -7,10 +8,10 @@ export class PeliculaEntity{
     id?: number;
     
     @Column({type: 'varchar', length:40})
-    nombre: string;
+    nombre?: string;
     
-    @Column({type: 'int', length:40})
-    anioLanzamiento: number;
+    @Column({type: 'int'})
+    anioLanzamiento?: number;
     
     @Column({type: 'int'})
     rating?: number;
@@ -19,6 +20,9 @@ export class PeliculaEntity{
     actoresPrincipales?: string;
 
     @Column({type: 'varchar'})
-    sinopsis: string;
+    sinopsis?: string;
+
+    @ManyToOne(type => ActorEntity, actor => actor.id, {eager: true})
+    actor?: ActorEntity;
 
 }

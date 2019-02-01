@@ -4,10 +4,13 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ActorEntity } from './actor/actor.entity';
 import { ActorModule } from './actor/actor.module';
+import { PeliculaModule } from './pelicula/pelicula.module';
+import { PeliculaEntity } from './pelicula/pelicula.entity';
 
 @Module({
   imports: [
     ActorModule,
+    PeliculaModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
@@ -17,7 +20,8 @@ import { ActorModule } from './actor/actor.module';
       database: 'web-2018',
       synchronize: true,
       entities: [
-        ActorEntity
+        ActorEntity,
+        PeliculaEntity
       ],
     })
   ],
