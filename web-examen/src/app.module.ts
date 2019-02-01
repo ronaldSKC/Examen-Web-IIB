@@ -25,7 +25,7 @@ import { EventoPeliculaEntity } from './evento-pelicula/evento.entity';
       password: '12345678',
       database: 'web-2018',
       synchronize: true,
-      dropSchema: true,
+      dropSchema: false,
       entities: [
         ActorEntity,
         PeliculaEntity,

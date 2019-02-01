@@ -8,10 +8,10 @@ export class EventoPeliculaEntity{
     @PrimaryGeneratedColumn()
     id?: number;
 
-    @ManyToOne(type => PeliculaEntity, pelicula => pelicula.id)
+    @ManyToOne(type => PeliculaEntity, pelicula => pelicula.id, {eager: true})
     pelicula: PeliculaEntity;
 
-    @ManyToOne(type => EventoEntity, evento => evento.id)
+    @ManyToOne(type => EventoEntity, evento => evento.id, {eager: true})
     evento: EventoEntity;
 
 }
