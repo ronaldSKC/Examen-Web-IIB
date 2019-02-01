@@ -9,42 +9,40 @@ import { ActorUpdateDto } from "./actor-update-dto/actor-update.dto";
 export class ActorController {
 
     constructor(
-        private readonly _usuarioService: ActorService
+        private readonly _actorService: ActorService
     ) { }
  
     @Get('buscar')
     findAll() {
-        return this._usuarioService.findAll();
+        return this._actorService.findAll();
     }
  
     @Get('buscarPorId/:id')
     findOne(
         @Param('id') id
     ) {
-        return this._usuarioService.findOne(id);
+        return this._actorService.findOne(id);
     }
 
     @Post('crear')
     create(
         @Body() actorCrear: ActorCreateDto
     ) {
-        const actorACrearse = actorCrear
-        return this._usuarioService.create(actorACrearse)
+        return this._actorService.create(actorCrear)
     }
 
     @Delete('eliminar/:id')
     eliminarUno(
         @Req() req
     ) {
-        return this._usuarioService.delete(req.params.id)
+        return this._actorService.delete(req.params.id)
     }
  
     @Post('editar/:id')
     editarUno(
-        @Param('id') idUsuario,
+        @Param('id') idActor,
         @Body() actorEditar: ActorUpdateDto
     ) { 
-        const usuarioAModificar = actorEditar
-        return this._usuarioService.update(idUsuario, usuarioAModificar)    
+        return this._actorService.update(idActor, actorEditar)    
     }
 }

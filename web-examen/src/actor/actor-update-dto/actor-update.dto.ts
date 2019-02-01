@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsString, IsBoolean, IsNumber, IsDate, IsOptional, IsDateString, IsBooleanString } from "class-validator";
+import { IsNotEmpty, IsString, IsNumber,  IsOptional, IsDateString, IsBooleanString } from "class-validator";
 
 export class ActorUpdateDto {
 
@@ -25,24 +25,3 @@ export class ActorUpdateDto {
     @IsBooleanString()
     retirado?: boolean;
 }
-
-/*
-7.	Actor 
-- nombres 
-- apellidos 
-- fechaNacimiento 
-- numeroPeliculas (entero) 
-- retirado (booleano) 
- 
- 
-Pelicula 
-- identificadorPelicula (entero) 
-- nombre 
-- anioLanzamiento (entero) 
-- rating (entero) 
-- actoresPrincipales 
-- sinopsis 
-- actorId 
- 
-
-*/
