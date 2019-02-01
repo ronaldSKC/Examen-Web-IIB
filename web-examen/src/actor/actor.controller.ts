@@ -1,7 +1,7 @@
 import { Controller, Get, Param, Post, Body, Delete, Req, BadRequestException, Put } from "@nestjs/common";
 import { ActorService } from "./actor.service";
-import { ActorCreateDto } from "./actor-create-dto/actor-create.dto";
 import { ActorUpdateDto } from "./actor-update-dto/actor-update.dto";
+import { ActorCreateDto } from "src/evento/evento-create-dto/evento-create.dto";
 
 
 @Controller('actor')
