@@ -1,5 +1,6 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, ManyToMany, JoinTable } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, ManyToMany, JoinTable, OneToMany } from "typeorm";
 import { ActorEntity } from "src/actor/actor.entity";
+import { EventoPeliculaEntity } from "src/evento-pelicula/evento.entity";
 
 @Entity('pelicula')
 export class PeliculaEntity{
@@ -24,5 +25,8 @@ export class PeliculaEntity{
 
     @ManyToOne(type => ActorEntity, actor => actor.id, {eager: true})
     actor?: ActorEntity;
+
+    @OneToMany(type => EventoPeliculaEntity, eventoPelicula => eventoPelicula.id)
+    eventoPelicula: EventoPeliculaEntity[];
 
 }

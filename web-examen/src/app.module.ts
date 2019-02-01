@@ -8,12 +8,15 @@ import { PeliculaModule } from './pelicula/pelicula.module';
 import { PeliculaEntity } from './pelicula/pelicula.entity';
 import { EventoModule } from './evento/evento.module';
 import { EventoEntity } from './evento/evento.entity';
+import { EventoPeliculaModule } from './evento-pelicula/evento.module';
+import { EventoPeliculaEntity } from './evento-pelicula/evento.entity';
 
 @Module({
   imports: [
     ActorModule,
     PeliculaModule,
     EventoModule,
+    EventoPeliculaModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
@@ -26,7 +29,8 @@ import { EventoEntity } from './evento/evento.entity';
       entities: [
         ActorEntity,
         PeliculaEntity,
-        EventoEntity
+        EventoEntity,
+        EventoPeliculaEntity
       ],
     })
   ],
