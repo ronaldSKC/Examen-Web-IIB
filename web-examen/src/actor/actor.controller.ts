@@ -2,6 +2,7 @@ import { Controller, Get, Param, Post, Body, Delete, Req, BadRequestException, P
 import { ActorService } from "./actor.service";
 import { ActorUpdateDto } from "./actor-update-dto/actor-update.dto";
 import { ActorCreateDto } from "src/evento/evento-create-dto/evento-create.dto";
+import { EventoCreateDto } from "./actor-create-dto/actor-create.dto";
 
 
 
@@ -32,9 +33,16 @@ export class ActorController {
     }
     @Post('crear-actor')
     create(
-        @Body() actorCrear: ActorCreateDto
+        @Body() actorCrear: EventoCreateDto
     ) {
-        return this._actorService.create(actorCrear)
+        const actorCrearNew ={
+            nombres: actorCrear.nombres,
+            apellidos: actorCrear.apellidos,
+            fechaNacimiento: actorCrear.fechaNacimiento,
+            numeroPeliculas: Number(actorCrear.numeroPeliculas),
+            retirado: Boolean(actorCrear.retirado) 
+        }
+        return this._actorService.create(actorCrearNew)
     }
 
     @Delete('eliminar/:id')

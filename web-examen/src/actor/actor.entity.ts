@@ -19,7 +19,7 @@ export class ActorEntity{
     @Column({type: 'int'})
     numeroPeliculas?: number;
 
-    @Column({type: 'boolean'})
+    @Column({type: 'boolean', nullable:true})
     retirado: boolean;
 
     @OneToMany(type => PeliculaEntity, pelicula => pelicula.actor)

@@ -4,6 +4,7 @@ import { Repository, FindOneOptions } from "typeorm";
 import { ActorEntity } from "./actor.entity";
 import { ActorUpdateDto } from "./actor-update-dto/actor-update.dto";
 import { ActorCreateDto } from "src/evento/evento-create-dto/evento-create.dto";
+import { EventoCreateDto } from "./actor-create-dto/actor-create.dto";
 
 
 @Injectable()
@@ -22,7 +23,7 @@ export class ActorService {
         return await this._usuarioRepository.find();
     }
 
-    async create(datosCrearActor: ActorCreateDto) {
+    async create(datosCrearActor: EventoCreateDto) {
         return await this._usuarioRepository.save(datosCrearActor)
     }
 
