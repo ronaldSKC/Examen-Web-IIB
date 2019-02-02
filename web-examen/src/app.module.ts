@@ -20,7 +20,7 @@ import { EventoPeliculaEntity } from './evento-pelicula/evento.entity';
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
-      port: 32769,
+      port: 32775,
       username: 'admin',
       password: '12345678',
       database: 'web-2018',
@@ -32,7 +32,7 @@ import { EventoPeliculaEntity } from './evento-pelicula/evento.entity';
         EventoEntity,
         EventoPeliculaEntity
       ],
-    })
+    }),ActorModule
   ],
   controllers: [AppController],
   providers: [AppService],

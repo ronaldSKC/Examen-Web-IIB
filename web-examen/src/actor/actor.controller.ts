@@ -1,7 +1,8 @@
-import { Controller, Get, Param, Post, Body, Delete, Req, BadRequestException, Put } from "@nestjs/common";
+import { Controller, Get, Param, Post, Body, Delete, Req, BadRequestException, Put, Res } from "@nestjs/common";
 import { ActorService } from "./actor.service";
 import { ActorUpdateDto } from "./actor-update-dto/actor-update.dto";
 import { ActorCreateDto } from "src/evento/evento-create-dto/evento-create.dto";
+
 
 
 @Controller('actor')
@@ -23,8 +24,13 @@ export class ActorController {
     ) {
         return this._actorService.findOne(id);
     }
-
-    @Post('crear')
+    @Get('crear-actor')
+    crearActor(
+        @Res() res
+    ){
+        res.render('crear-actor')
+    }
+    @Post('crear-actor')
     create(
         @Body() actorCrear: ActorCreateDto
     ) {
