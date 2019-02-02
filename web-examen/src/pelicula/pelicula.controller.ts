@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post, Body, Delete, Req, BadRequestException, Put } from "@nestjs/common";
+import { Controller, Get, Param, Post, Body, Delete, Req, BadRequestException, Put, Res } from "@nestjs/common";
 import { PeliculaService } from "./pelicula.service";
 import { PeliculaCreateDto } from "./pelicula-create-dto/pelicula-create.dto";
 import { PeliculaUpdateDto } from "./pelicula-update-dto/pelicula-update.dto";
@@ -23,11 +23,17 @@ export class PeliculaController {
     ) {
         return this._peliculaService.findOne(id);
     }
-
-    @Post('crear')
+    @Get('crear-pelicula')
+    crearPelicula(
+        @Res() res
+    ){
+        res.render('crear-pelicula')
+    }
+    @Post('crear-pelicula')
     create(
         @Body() peliculaCrear: PeliculaCreateDto
     ) {
+        console.log(peliculaCrear)
         return this._peliculaService.create(peliculaCrear)
     }
 

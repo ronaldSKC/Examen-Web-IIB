@@ -5,66 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crear Actor</title>
+    <title>Crear Pelicula</title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
 </head>
 
 <body>
     <div class="container">
-        <form action="/actor/crear-actor" method="POST">
-            <h1>Crear Actor</h1>
+        <form action="/pelicula/crear-pelicula" method="POST">
+            <h1>Crear Pelicula</h1>
             <div class="col-sm-10">
                 <div class="row">
                     <div class="col-sm-6">
                         <div>
-                            <label for="nombres">Nombres</label>
+                            <label for="nombre">Nombre</label>
                         </div>
                         <div>
-                            <label for="apellidos">Apellidos</label>
+                            <label for="anioLanzamiento">Año de Lanzamiento</label>
                         </div>
                         <div>
-                            <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                            <label for="rating">Rating</label>
                         </div>
                         <div>
-                            <label for="numeroPeliculas">Número de Peliculas</label>
+                            <label for="actoresPrincipales">Actores Principales</label>
                         </div>
                         <div>
-                            <label for="retirado">Retirado</label>
+                            <label for="sinopsis">Sinopsis</label>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div>
-                            <input class="form-control" type="text" id="nombres" name="nombres">
+                            <input class="form-control" type="text" id="nombre" name="nombre">
                         </div>
                         <div>
-                            <input class="form-control" type="text" id="apellidos" name="apellidos">
+                            <input class="form-control" type="number" id="anioLanzamiento" name="anioLanzamiento">
                         </div>
                         <div>
-                            <input class="form-control" type="date" id="fechaNacimiento" name="fechaNacimiento">
+                            <input class="form-control" type="number" id="rating" name="rating">
                         </div>
                         <div>
-                            <input class="form-control" type="number" id="numeroPeliculas" name="numeroPeliculas" min=1>
+                            <input class="form-control" type="text" id="actoresPrincipales" name="actoresPrincipales"
+                                min=1>
                         </div>
                         <div>
-                            <select class="custom-select" id="retirado" name="retirado">
-                                <option selected>Opcion...</option>
-                                <option value=true>Si</option>
-                                <option value=false>No</option>
-                            </select>
+                            <textarea class="form-control" cols="30" rows="5" id="sinopsis" name="sinopsis"></textarea>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-2">
-                <div class="row">
-                    <div>
-                        <button>Crear</button>
-                    </div>
+            <div class="row">
+                <div>
+                    <button>Crear</button>
                 </div>
             </div>
         </form>
         <div class="row">
-            <a href="/pelicula/crear-pelicula">
+            <a href="/actor/crear-actor">
                 <button>Crear Peliculas</button></a>
         </div>
     </div>
