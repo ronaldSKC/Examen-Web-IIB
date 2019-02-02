@@ -1,6 +1,6 @@
-import { IsNotEmpty, IsString, IsNumber, IsDate, IsOptional, IsBooleanString, IsDateString } from "class-validator";
+import { IsNotEmpty, IsString, IsNumber, IsOptional, IsBooleanString, IsDateString } from "class-validator";
 
-export class ActorCreateDto {
+export class EventoCreateDto {
 
     @IsOptional()
     id?: number;

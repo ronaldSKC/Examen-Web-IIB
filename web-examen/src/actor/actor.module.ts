@@ -15,4 +15,4 @@ import { ActorEntity } from "./actor.entity";
 
 export class ActorModule {
 
-}
+} 

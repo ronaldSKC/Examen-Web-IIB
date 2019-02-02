@@ -2,8 +2,8 @@ import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Repository, FindOneOptions } from "typeorm";
 import { ActorEntity } from "./actor.entity";
-import { ActorCreateDto } from "./actor-create-dto/actor-create.dto";
 import { ActorUpdateDto } from "./actor-update-dto/actor-update.dto";
+import { ActorCreateDto } from "src/evento/evento-create-dto/evento-create.dto";
 
 
 @Injectable()
