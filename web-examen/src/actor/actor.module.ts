@@ -3,12 +3,15 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { ActorService } from "./actor.service";
 import { ActorController } from "./actor.controller";
 import { ActorEntity } from "./actor.entity";
+import { PeliculaService } from "src/pelicula/pelicula.service";
+import { PeliculaModule } from "src/pelicula/pelicula.module";
 
 @Module({
     imports: [TypeOrmModule.forFeature([
         ActorEntity
-    ])],
-    providers: [ActorService],
+    ]), PeliculaModule],
+    providers: [ActorService, 
+    ],
     controllers: [ActorController],
     exports: [ActorService],
 })
@@ -16,3 +19,4 @@ import { ActorEntity } from "./actor.entity";
 export class ActorModule {
 
 } 
+    

@@ -27,10 +27,12 @@
     "class-validator": "^0.9.1",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "express-session": "^1.15.6",
     "graphql-type-json": "^0.2.1",
+    "http-server": "^0.11.1",
     "mysql": "^2.16.0",
     "reflect-metadata": "^0.1.12",
-    "rxjs": "^6.2.2",
+    "rxjs": "^6.4.0",
     "typeorm": "^0.2.12",
     "typescript": "^3.0.1"
   },
