@@ -7,18 +7,18 @@ export class ActorCreateDto {
 
     @IsNotEmpty()
     @IsString()
-    nombre?: string;
+    nombre: string;
 
     @IsNotEmpty()
     @IsDateString()
-    fecha?: string;
+    fecha: string;
 
     @IsNotEmpty()
     @IsNumber()
-    latitud?: number;
+    latitud: number;
 
     @IsNotEmpty()
     @IsNumber()
-    longitud?: number;
+    longitud: number;
 
 }

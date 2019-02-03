@@ -6,25 +6,25 @@ import { EventoPeliculaEntity } from "src/evento-pelicula/evento.entity";
 export class PeliculaEntity{
     
     @PrimaryGeneratedColumn()
-    id?: number;
+    id: number;
     
     @Column({type: 'varchar', length:40})
-    nombre?: string;
+    nombre: string;
     
     @Column({type: 'int'})
-    anioLanzamiento?: number;
+    anioLanzamiento: number;
     
     @Column({type: 'int'})
-    rating?: number;
+    rating: number;
 
     @Column({type: 'varchar'})
-    actoresPrincipales?: string;
+    actoresPrincipales: string;
 
     @Column({type: 'varchar'})
-    sinopsis?: string;
+    sinopsis: string;
 
     @ManyToOne(type => ActorEntity, actor => actor.id, {eager: true})
-    actor?: ActorEntity;
+    actor: ActorEntity;
 
     @OneToMany(type => EventoPeliculaEntity, eventoPelicula => eventoPelicula.id)
     eventoPelicula: EventoPeliculaEntity[];
