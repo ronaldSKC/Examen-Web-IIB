@@ -6,7 +6,7 @@ import { EventoEntity } from "src/evento/evento.entity";
 export class EventoPeliculaEntity{
     
     @PrimaryGeneratedColumn()
-    id?: number;
+    id: number;
 
     @ManyToOne(type => PeliculaEntity, pelicula => pelicula.id, {eager: true})
     pelicula: PeliculaEntity;

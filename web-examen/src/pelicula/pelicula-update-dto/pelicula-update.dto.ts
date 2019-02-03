@@ -1,28 +1,28 @@
-import { IsNotEmpty, IsString, IsOptional, IsInt } from "class-validator";
+import { IsString, IsOptional, IsInt } from "class-validator";
 
 export class PeliculaUpdateDto {
 
     @IsOptional()
-    id?: number;
+    id: number;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsString()
-    nombre?: string;
+    nombre: string;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsInt()
-    anioLanzamiento?: number;
+    anioLanzamiento: number;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsInt()
-    rating?: number;
+    rating: number;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsString()
-    actoresPrincipales?: string;
+    actoresPrincipales: string;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsString()
-    sinopsis?: string;
+    sinopsis: string;
     
 }
