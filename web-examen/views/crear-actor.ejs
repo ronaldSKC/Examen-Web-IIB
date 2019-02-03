@@ -1,3 +1,5 @@
+<% const existeTitulo = typeof titulo !== "undefined"%>
+<% const arr = typeof arreglo %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crear Actor</title>
+    <title>
+        <%= existeTitulo ? titulo : 'Examen Web'%>
+    </title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
 </head>
 
@@ -68,9 +72,43 @@
                 <button>Crear Peliculas</button></a>
         </div>
     </div>
+    <div>
+        <h2>Listado de Peliculas</h2>
+        <div class="scroll-tabla">
+            <table class="table table-hover animated slideInLeft">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Año de Lanzamiento</th>
+                        <th>Rating</th>
+                        <th>Actores Principales</th>
+                        <th>Sinopsis</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    
+                    <tr>
+                        <td>
+                            <%= arr%>
+                        </td>
+                        
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
     <script src="/js/jquery.js"></script>
     <script src="/js/popper.js"></script>
     <script src="/bootstrap/js/bootstrap.js"></script>
+    <script>
+        $(function () {
+            $('.popover-contenido').popover({
+                container: 'body'
+            })
+        })
+    </script>
 </body>
 
 </html>

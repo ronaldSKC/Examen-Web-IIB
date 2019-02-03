@@ -33,7 +33,7 @@ export class PeliculaController {
     create(
         @Body() peliculaCrear: PeliculaCreateDto
     ) {
-        console.log(peliculaCrear)
+        
         return this._peliculaService.create(peliculaCrear)
     }
 
