@@ -5,7 +5,7 @@ import { EventoCreateDto } from './actor-create-dto/actor-create.dto';
 import { ActorUpdateDto } from './actor-update-dto/actor-update.dto';
 import { PeliculaCreateDto } from 'src/pelicula/pelicula-create-dto/pelicula-create.dto';
 import { Like, FindManyOptions } from 'typeorm';
-import { PeliculaService } from 'src/pelicula/pelicula.service';
+import { PeliculaService } from '../pelicula/pelicula.service';
 import { ActorEntity } from './actor.entity';
 
 @Controller('actor')
@@ -14,6 +14,7 @@ export class ActorController {
 
     constructor(
         private readonly _actorService: ActorService,
+        private _peliculaService: PeliculaService
     ) { }
 
     @Get('buscar')
@@ -51,9 +52,8 @@ export class ActorController {
                     break;
             }
         }
-        let peliculas: ActorEntity[];
-        peliculas = await this._actorService.findAll();   
-        
+        let peliculas: PeliculaEntity[];
+        peliculas = await this._peliculaService.findAll();
         res.render(
             'crear-actor', {
                 arreglo: peliculas, // AQUI!
@@ -62,8 +62,6 @@ export class ActorController {
                 clase: clase,
                 titulo: "Crear Actor"
             });
-        
-        console.log(peliculas)
     }
     @Post('crear-actor')
     create(

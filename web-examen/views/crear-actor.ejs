@@ -1,5 +1,4 @@
 <% const existeTitulo = typeof titulo !== "undefined"%>
-<% const arr = typeof arreglo %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,15 +86,28 @@
                     </tr>
                 </thead>
                 <tbody>
-
-                    
+                    <% arreglo.forEach( (movie)=> { %>
                     <tr>
                         <td>
-                            <%= arr%>
+                            <%= movie.nombre%>
                         </td>
-                        
+                        <td>
+                            <%= movie.anioLanzamiento%>
+                        </td>
+                        <td>
+                            <%= movie.rating%>
+                        </td>
+                        <td>
+                            <%= movie.actoresPrincipales%>
+                        </td>
+                        <td>
+                            <%= movie.sinopsis%>
+                        </td>
+                        <td>
+                            <%= movie.actor%>
+                        </td>
                     </tr>
-                   
+                    <% }) %>
                 </tbody>
             </table>
         </div>

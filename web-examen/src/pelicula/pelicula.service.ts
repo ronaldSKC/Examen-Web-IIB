@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
-import { Repository } from "typeorm";
+import { Repository, FindManyOptions } from "typeorm";
 import { PeliculaEntity } from "./pelicula.entity";
 import { PeliculaCreateDto } from "./pelicula-create-dto/pelicula-create.dto";
 import { PeliculaUpdateDto } from "./pelicula-update-dto/pelicula-update.dto";
@@ -18,8 +18,8 @@ export class PeliculaService {
         return await this._peliculaRepository.findOne(id);
     }
 
-    async findAll() {
-        return await this._peliculaRepository.find();
+    async findAll(parametrosConsulta?:FindManyOptions<PeliculaEntity>):Promise<PeliculaEntity[]> {
+        return await this._peliculaRepository.find(parametrosConsulta);
     }
 
     async create(datosCrearPelicula: PeliculaCreateDto) {
