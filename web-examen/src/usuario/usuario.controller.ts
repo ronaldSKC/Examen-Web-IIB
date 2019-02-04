@@ -15,6 +15,14 @@ export class UsuarioController{
     ){
 
     }
+
+    @Get('login')
+    credenciales(
+        @Res() response,
+    ) {
+        response.render('login')
+    }
+
     @Get('crear-usuario')
     crearUsuario(
         @Res() response
@@ -47,7 +55,7 @@ export class UsuarioController{
         } else {
             await this._usuarioService.crear(usuario);
 
-        //    response.redirect('inicio');
+            response.redirect('/usuario/login');
 
 
         }

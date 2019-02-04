@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe140aad-7ba3-43ca-b2a0-493a5a0190df" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/web-examen/views/crear-usuario.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-examen/views/login.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/usuario/usuario-create-dto/usuario-create.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/usuario/usuario-create-dto/usuario-create.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-examen/src/usuario/usuario.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/usuario/usuario.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/usuario/usuario.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/usuario/usuario.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/usuario/usuario.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/usuario/usuario.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/views/crear-actor.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/views/crear-actor.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -84,8 +78,17 @@
       <file leaf-file-name="usuario.controller.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-examen/src/usuario/usuario.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+            <state relative-caret-position="117">
+              <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-examen/views/login.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -105,6 +108,7 @@
         <option value="$PROJECT_DIR$/web-examen/src/usuario/usuario.service.ts" />
         <option value="$PROJECT_DIR$/web-examen/views/crear-usuario.ejs" />
         <option value="$PROJECT_DIR$/web-examen/src/usuario/usuario-create-dto/usuario-create.dto.ts" />
+        <option value="$PROJECT_DIR$/web-examen/views/login.ejs" />
         <option value="$PROJECT_DIR$/web-examen/src/usuario/usuario.controller.ts" />
       </list>
     </option>
@@ -257,26 +261,26 @@
       <workItem from="1549233342198" duration="1390000" />
       <workItem from="1549238103267" duration="1576000" />
       <workItem from="1549284882952" duration="6485000" />
-      <workItem from="1549308004446" duration="3974000" />
+      <workItem from="1549308004446" duration="5170000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29316000" />
+    <option name="totallyTimeSpent" value="30512000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32843137" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18898809" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18898809" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32843137" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.30882353" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.30882353" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -315,13 +319,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web-examen/src/usuario/usuario.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/src/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -649,10 +646,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/views/login.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/src/usuario/usuario.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+        <state relative-caret-position="117">
+          <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
         </state>
       </provider>
     </entry>
