@@ -39,7 +39,12 @@
                         <div>
                             <select class="custom-select" id="autor" name="autor">
                                 <option selected>Opcion...</option>
-                                <option value=""></option>
+                                <% arreglo.forEach((actores)=>{%>
+                                <option value="<%= actores.actor%>">
+                                    <%actores.actor%>
+                                </option>
+                                <% }) %>
+                            </select>
                         </div>
                         <div>
                             <input class="form-control" type="text" id="nombre" name="nombre">

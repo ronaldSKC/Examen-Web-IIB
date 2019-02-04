@@ -31,9 +31,10 @@ export class PeliculaController {
     ){
         let pelicula: PeliculaEntity[]
         pelicula= await this._peliculaService.findAll()
-        pelicula.forEach((actor)=>{console.log(`${actor.actor} `)})
-        pelicula = await this._peliculaService.findAll()
-        res.render('crear-pelicula')
+        
+        res.render('crear-pelicula',{
+            arreglo: pelicula
+        })
         
     }   
     @Post('crear-pelicula')
