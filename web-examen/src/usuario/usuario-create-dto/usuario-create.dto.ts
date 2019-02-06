@@ -7,7 +7,7 @@ import {
     IsEmail,
     MinLength,
     MaxLength,
-    Matches, IsAlpha
+    Matches, IsAlpha, IsDate
 } from "class-validator";
 
 export class UsuarioDto {
@@ -32,8 +32,8 @@ export class UsuarioDto {
     password_usuario?:string;
 
 
-    @IsString()
+    @IsDate()
     @IsNotEmpty()
-    fecha_nacimiento_usuario?:string;
+    fecha_nacimiento_usuario?:Date;
 
 }

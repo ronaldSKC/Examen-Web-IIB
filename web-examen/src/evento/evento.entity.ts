@@ -6,19 +6,19 @@ import { EventoPeliculaEntity } from "src/evento-pelicula/evento.entity";
 export class EventoEntity{
     
     @PrimaryGeneratedColumn()
-    id?: number;
+    id: number;
     
     @Column({type: 'varchar', length:40})
-    nombre?: string;
+    nombre: string;
     
     @Column({type: 'varchar', length:10})
-    fecha?: string;
+    fecha: string;
     
     @Column({type: 'decimal'})
-    latitud?: number;
+    latitud: number;
 
     @Column({type: 'decimal'})
-    longitud?: number;
+    longitud: number;
 
     @OneToMany(type => EventoPeliculaEntity, eventoPelicula => eventoPelicula.id)
     eventoPelicula: EventoPeliculaEntity[];

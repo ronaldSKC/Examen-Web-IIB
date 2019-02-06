@@ -1,27 +1,27 @@
-import { IsNotEmpty, IsString, IsNumber,  IsOptional, IsDateString, IsBooleanString } from "class-validator";
+import { IsString, IsNumber,  IsOptional, IsDateString, IsBooleanString } from "class-validator";
 
 export class ActorUpdateDto {
 
     @IsOptional()
     id?: number;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsString()
-    nombres?: string;
+    nombres: string;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsString()
-    apellidos?: string;
+    apellidos: string;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsDateString()
-    fechaNacimiento?: string;
+    fechaNacimiento: string;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsNumber()
-    numeroPeliculas?: number;
+    numeroPeliculas: number;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsBooleanString()
-    retirado?: boolean;
+    retirado: boolean;
 }

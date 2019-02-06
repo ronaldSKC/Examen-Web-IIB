@@ -6,6 +6,7 @@ import * as session from 'express-session';
 const FileStore = require('session-file-store')(session);
 
 async function bootstrap() {
+
     const app = await NestFactory.create(AppModule);
    app.use(
         session({
@@ -20,6 +21,8 @@ async function bootstrap() {
     app.set('view engine', 'ejs');
     app.use(express.static('publico'));
     await app.listen(3000);
+
+
 
 }
 bootstrap();

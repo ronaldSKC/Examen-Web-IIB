@@ -6,6 +6,7 @@ import {RolPorUsuarioEntity} from "../rolPorUsuario/rolPorUsuario.entity";
 export class RolEntity {
 
     @PrimaryGeneratedColumn()
+
     id:number;
 
     @Column(
@@ -21,6 +22,7 @@ export class RolEntity {
         type => RolPorUsuarioEntity,
         rolPorUsuario => rolPorUsuario.rol
     )
+
 
     rolesPorUsuario:RolPorUsuarioEntity[];
 }

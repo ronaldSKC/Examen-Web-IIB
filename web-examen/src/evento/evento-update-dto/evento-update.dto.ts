@@ -1,24 +1,24 @@
-import { IsNotEmpty, IsString, IsNumber,  IsOptional, IsDateString, IsBooleanString } from "class-validator";
+import { IsString, IsNumber,  IsOptional, IsDateString, IsBooleanString } from "class-validator";
 
 export class EventoUpdateDto {
 
     @IsOptional()
-    id?: number;
+    id: number;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsString()
-    nombre?: string;
+    nombre: string;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsDateString()
-    fecha?: string;
+    fecha: string;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsNumber()
-    latitud?: number;
+    latitud: number;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsNumber()
-    longitud?: number;
+    longitud: number;
 
 }
