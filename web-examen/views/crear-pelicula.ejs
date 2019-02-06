@@ -37,11 +37,12 @@
                     </div>
                     <div class="col-sm-6">
                         <div>
-                            <select class="custom-select" id="autor" name="autor">
+                            <select class="custom-select" id="actor" name="actor">
                                 <option selected>Opcion...</option>
                                 <% arreglo.forEach((actores)=>{%>
-                                <option value="<%= actores.actor%>">
-                                    <%actores.actor%>
+                                <option value="<%= actores.id%>">
+                                    <%= actores.nombres%>
+                                    <%= actores.apellidos%>
                                 </option>
                                 <% }) %>
                             </select>

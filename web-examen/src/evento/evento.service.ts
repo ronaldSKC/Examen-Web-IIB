@@ -4,6 +4,7 @@ import { Repository } from "typeorm";
 import { EventoEntity } from "./evento.entity";
 import { EventoCreateDto } from "src/actor/actor-create-dto/actor-create.dto";
 import { EventoUpdateDto } from "./evento-update-dto/evento-update.dto";
+import { ActorCreateDto } from "./evento-create-dto/evento-create.dto";
 
 
 
@@ -23,7 +24,7 @@ export class EventoService {
         return await this._eventoRepository.find();
     }
 
-    async create(datosCrearEvento: EventoCreateDto) {
+    async create(datosCrearEvento: ActorCreateDto) {
         return await this._eventoRepository.save(datosCrearEvento)
     }
 
