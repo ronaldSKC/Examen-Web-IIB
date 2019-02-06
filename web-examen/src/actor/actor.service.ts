@@ -1,17 +1,22 @@
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
-import { Repository, FindOneOptions } from "typeorm";
+import { Repository, FindOneOptions, FindManyOptions } from "typeorm";
 import { ActorEntity } from "./actor.entity";
 import { ActorUpdateDto } from "./actor-update-dto/actor-update.dto";
 import { ActorCreateDto } from "src/evento/evento-create-dto/evento-create.dto";
+import { EventoCreateDto } from "./actor-create-dto/actor-create.dto";
+import { PeliculaEntity } from "src/pelicula/pelicula.entity";
+import { PeliculaService } from "src/pelicula/pelicula.service";
 
 
 @Injectable()
 
 export class ActorService {
+    
     constructor(
         @InjectRepository(ActorEntity)
-        private readonly _usuarioRepository: Repository<ActorEntity>
+        private readonly _usuarioRepository: Repository<ActorEntity>,
+        
     ) { }
 
     async findOne(id: number) {
@@ -21,8 +26,12 @@ export class ActorService {
     async findAll() {
         return await this._usuarioRepository.find();
     }
-
-    async create(datosCrearActor: ActorCreateDto) {
+    /*async findAllMovies(parametroBusqueda?: FindManyOptions<ActorEntity>){
+        const actor = await this._usuarioRepository.find(parametroBusqueda);
+        const movies = actor.forEach((movie)=>{movie.pelicula})
+        
+    }*/
+    async create(datosCrearActor: EventoCreateDto) {
         return await this._usuarioRepository.save(datosCrearActor)
     }
 

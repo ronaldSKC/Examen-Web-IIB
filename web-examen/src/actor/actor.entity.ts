@@ -5,7 +5,7 @@ import { PeliculaEntity } from "src/pelicula/pelicula.entity";
 export class ActorEntity{
     
     @PrimaryGeneratedColumn()
-    id?: number;
+    id: number;
     
     @Column({type: 'varchar', length:40})
     nombres: string;
@@ -14,12 +14,12 @@ export class ActorEntity{
     apellidos: string;
     
     @Column({type: 'varchar', length:10})
-    fechaNacimiento?: string;
+    fechaNacimiento: string;
 
     @Column({type: 'int'})
-    numeroPeliculas?: number;
+    numeroPeliculas: number;
 
-    @Column({type: 'boolean'})
+    @Column({type: 'boolean', nullable:true})
     retirado: boolean;
 
     @OneToMany(type => PeliculaEntity, pelicula => pelicula.actor)

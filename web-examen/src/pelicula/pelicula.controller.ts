@@ -1,7 +1,9 @@
-import { Controller, Get, Param, Post, Body, Delete, Req, BadRequestException, Put } from "@nestjs/common";
+import { Controller, Get, Param, Post, Body, Delete, Req, BadRequestException, Put, Res } from "@nestjs/common";
 import { PeliculaService } from "./pelicula.service";
 import { PeliculaCreateDto } from "./pelicula-create-dto/pelicula-create.dto";
 import { PeliculaUpdateDto } from "./pelicula-update-dto/pelicula-update.dto";
+import { PeliculaEntity } from "./pelicula.entity";
+
 
 
 @Controller('pelicula')
@@ -9,7 +11,7 @@ import { PeliculaUpdateDto } from "./pelicula-update-dto/pelicula-update.dto";
 export class PeliculaController {
 
     constructor(
-        private readonly _peliculaService: PeliculaService
+        private readonly _peliculaService: PeliculaService,
     ) { }
  
     @Get('buscar')
@@ -23,11 +25,22 @@ export class PeliculaController {
     ) {
         return this._peliculaService.findOne(id);
     }
-
-    @Post('crear')
+    @Get('crear-pelicula')
+    async crearPelicula(
+        @Res() res
+    ){
+        let pelicula: PeliculaEntity[]
+        pelicula= await this._peliculaService.findAll()
+        pelicula.forEach((actor)=>{console.log(`${actor.actor} `)})
+        pelicula = await this._peliculaService.findAll()
+        res.render('crear-pelicula')
+        
+    }   
+    @Post('crear-pelicula')
     create(
         @Body() peliculaCrear: PeliculaCreateDto
     ) {
+        
         return this._peliculaService.create(peliculaCrear)
     }
 

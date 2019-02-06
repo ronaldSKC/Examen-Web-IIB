@@ -3,26 +3,26 @@ import { IsNotEmpty, IsString, IsOptional, IsInt } from "class-validator";
 export class PeliculaCreateDto {
 
     @IsOptional()
-    id?: number;
+    id: number;
 
     @IsNotEmpty()
     @IsString()
-    nombre?: string;
+    nombre: string;
 
     @IsNotEmpty()
     @IsInt()
-    anioLanzamiento?: number;
+    anioLanzamiento: number;
 
     @IsNotEmpty()
     @IsInt()
-    rating?: number;
+    rating: number;
 
     @IsNotEmpty()
     @IsString()
-    actoresPrincipales?: string;
+    actoresPrincipales: string;
 
     @IsNotEmpty()
     @IsString()
-    sinopsis?: string;
+    sinopsis: string;
 
 }

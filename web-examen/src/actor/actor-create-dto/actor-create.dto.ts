@@ -7,22 +7,22 @@ export class EventoCreateDto {
 
     @IsNotEmpty()
     @IsString()
-    nombres?: string;
+    nombres: string;
 
     @IsNotEmpty()
     @IsString()
-    apellidos?: string;
+    apellidos: string;
 
     @IsNotEmpty()
     @IsDateString()
-    fechaNacimiento?: string;
+    fechaNacimiento: string;
 
     @IsNotEmpty()
     @IsNumber()
-    numeroPeliculas?: number;
+    numeroPeliculas: number;
 
     @IsNotEmpty()
     @IsBooleanString()
-    retirado?: boolean;
+    retirado: boolean;
 
 }
