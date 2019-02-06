@@ -23,7 +23,7 @@
             };
 
             var map = new google.maps.Map(document.getElementById("map"), mapa);
-
+            
             infoWindow = new google.maps.InfoWindow;
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (position) {
@@ -44,9 +44,9 @@
                 handleLocationError(false, infoWindow, map.getCenter());
             }
             google.maps.event.addListener(map, 'click', function (event) {
-
-                document.getElementById("latitud").value = event.latLng.lat()
-                document.getElementById("longitud").value = event.latLng.lng();
+                
+                document.getElementById("latitud").value=event.latLng.lat()
+                document.getElementById("longitud").value=event.latLng.lng();
                 addMarker(event.latLng, map);
             });
             addMarker(bangalore, map);
@@ -101,15 +101,16 @@
                             <input class="form-control" type="date" id="fecha" name="fecha">
                         </div>
                         <div>
-                            <input class="form-control" id="latitud" name="latitud">
+                            <input class="form-control" id="latitud" name="latitud" >
                         </div>
                         <div>
-                            <input class="form-control" id="longitud" name="longitud">
+                            <input class="form-control" id="longitud" name= "longitud">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
+<<<<<<< HEAD
                 <div class="col-sm-4">
                     <div>
                         <button>Crear</button>
@@ -146,24 +147,19 @@
                             </div>
                         </div>
                     </div>
+=======
+                <div>
+                    <button>Crear</button>
+>>>>>>> parent of 34b389a... peliculas en crear-evento
                 </div>
             </div>
         </form>
-
+        
         <div>
             <div id="map"></div>
         </div>
     </div>
-    <script src="/js/jquery.js"></script>
-    <script src="/js/popper.js"></script>
-    <script src="/bootstrap/js/bootstrap.js"></script>
-    <script>
-        $(function () {
-            $('.popover-contenido').popover({
-                container: 'body'
-            })
-        })
-    </script>
+
 </body>
 
 </html>

@@ -3,8 +3,6 @@ import { EventoCreateDto } from "src/actor/actor-create-dto/actor-create.dto";
 import { EventoUpdateDto } from "./evento-update-dto/evento-update.dto";
 import { EventoService } from "./evento.service";
 import { ActorCreateDto } from "./evento-create-dto/evento-create.dto";
-import { async } from "rxjs/internal/scheduler/async";
-import { PeliculaEntity } from "src/pelicula/pelicula.entity";
 
 
 @Controller('evento')
@@ -13,7 +11,6 @@ export class EventoController {
 
     constructor(
         private readonly _eventoService: EventoService
-
     ) { }
  
     @Get('buscar')
@@ -33,7 +30,6 @@ export class EventoController {
     ){
         res.render('crear-evento')
     }
-    
     @Get()
     async irAEvento(
         @Res() res

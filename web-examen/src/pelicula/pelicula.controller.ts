@@ -5,8 +5,6 @@ import { PeliculaUpdateDto } from "./pelicula-update-dto/pelicula-update.dto";
 import { PeliculaEntity } from "./pelicula.entity";
 import { ActorService } from "src/actor/actor.service";
 import { ActorEntity } from "src/actor/actor.entity";
-import { EventoPeliculaEntity } from "src/evento-pelicula/evento.entity";
-import { EventoPeliculaService } from "src/evento-pelicula/evento.service";
 
 
 
@@ -17,7 +15,6 @@ export class PeliculaController {
     constructor(
         private readonly _peliculaService: PeliculaService,
         private readonly _actorService: ActorService,
-        private readonly _eventoPelicula: EventoPeliculaService,
     ) { }
  
     @Get('buscar')
@@ -43,13 +40,12 @@ export class PeliculaController {
         
     }   
     @Post('crear-pelicula')
-    async create(
+    create(
         @Body() peliculaCrear: PeliculaCreateDto,
         @Res() res
     ) {
-        this._peliculaService.create(peliculaCrear)    
         res.redirect("/actor/crear-actor")
-  
+        return this._peliculaService.create(peliculaCrear)
     }
 
     @Delete('eliminar/:id')

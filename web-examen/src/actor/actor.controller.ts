@@ -54,9 +54,12 @@ export class ActorController {
         }
         let peliculas: PeliculaEntity[];
         peliculas = await this._peliculaService.findAll();
+        const actores = peliculas.forEach((act)=>{act.actor})
+        console.log(peliculas)
         res.render(
             'crear-actor', {
                 arreglo: peliculas, // AQUI!
+                arregloActores: actores,
                 booleano: false,
                 mensaje: mensaje,
                 clase: clase,

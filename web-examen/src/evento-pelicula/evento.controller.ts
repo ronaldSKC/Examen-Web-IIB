@@ -1,9 +1,7 @@
-import { Controller, Get, Param, Post, Body, Delete, Req, Res } from "@nestjs/common";
+import { Controller, Get, Param, Post, Body, Delete, Req } from "@nestjs/common";
 import { EventoPeliculaService } from "./evento.service";
 import { EventoPeliculaCreateDto } from "./evento-pelicula-create-dto/evento-pelicula-create.dto";
 import { EventoPeliculaUpdateDto } from "./evento-pelicula-update-dto/evento-pelicula-update.dto";
-import { PeliculaEntity } from "src/pelicula/pelicula.entity";
-import { EventoPeliculaEntity } from "./evento.entity";
 
 @Controller('evento-pelicula')
 
@@ -24,6 +22,7 @@ export class EventoPeliculaController {
     ) {
         return this._eventoPeliculaService.findOne(id);
     }
+<<<<<<< HEAD
     @Get()
     async verPeliculas(
         @Res() res,
@@ -34,6 +33,9 @@ export class EventoPeliculaController {
         console.log('respuesta map',result)
         res.render('evento-pelicula') 
     }
+=======
+
+>>>>>>> parent of 34b389a... peliculas en crear-evento
     @Post('crear')
     create(
         @Body() eventoPeliculaCrear: EventoPeliculaCreateDto
