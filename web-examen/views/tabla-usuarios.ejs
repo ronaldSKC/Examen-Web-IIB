@@ -1,51 +1,91 @@
-<% const existeMensaje = typeof mensaje !== "undefined"%>
+<!Doctype html>
+<html lang="es">
 
-<style>
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista Usuarios</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="/css/estilos-generales.css">
+</head>
+<body>
+<div class="container">
 
-<% if (existeMensaje){%>
-<p>MENSAJE: <%=mensaje%></p>
-<%}%>
+    <% const existeMensaje = typeof mensaje !== "undefined"%>
 
-<h1>Lista de usuarios</h1>
+    <% if (existeMensaje){%>
+    <div class="alert alert-primary" role="alert">
+        <span class="font-weight-bold">
+        MENSAJE:
+        </span> <%=mensaje%>
 
-<form action="/usuario/inicio" method="get">
+    </div>
+    <%}%>
 
-    <label for="busqueda">Búsqueda</label>
-    <input id="busqueda" type="text" name="busqueda">
+    <h1 align="center">Lista de usuarios</h1>
 
-    <button>Buscar</button>
-</form>
+    <form action="/usuario/inicio" method="get">
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="form-group">
+                    <label for="busqueda">Búsqueda</label>
+                    <input id="busqueda" type="text" placeholder="Search"  class="form-control" name="busqueda">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <button class="btn btn-outline-info btn-block espaciado-busqueda"
+                        type="submit">Buscar
+                </button>
 
 
+            </div>
+        </div>
 
-<table>
-    <!-- tr -> table row -->
-    <tr>
-        <!-- th -> table header -->
-        <th>Nombre</th>
-        <th>Correo</th>
-        <th>Fecha de Nacimiento</th>
-        <th>Acciones</th>
-    </tr>
+    </form>
 
-    <% arregloUsuario.forEach( (usuario)=> { %>
-    <tr>
-        <td><%= usuario.nombre_usuario %></td>
-        <td><%= usuario.email_usuario %></td>
-        <td><%= usuario.fecha_nacimiento_usuario%></td>
-        <td>
-            <a href="/rol-por-usuario/asignar-rol/<%= usuario.id %>">
-                <button>Actualizar</button>
-            </a>
-            <form action="/usuario/borrar/<%= usuario.id %>" method="POST">
-                <button type="submit"> Eliminar</button>
-            </form>
-        </td>
-    </tr>
-    <% }) %>
-</table>
+    <div class="modal-body">
+
+        <table class="table table-hover animated fadeInUp">
+
+            <!-- tr -> table row -->
+            <thead>
+            <!-- tr -> table row -->
+            <tr>
+                <!-- th -> table header -->
+                <th width="30%">Nombre</th>
+                <th width="50%">Correo</th>
+                <th width="20%">Fecha de Nacimiento</th>
+                <th width="30%">Acciones</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <% arregloUsuario.forEach( (usuario)=> { %>
+            <tr>
+                <td><%= usuario.nombre_usuario %></td>
+                <td><%= usuario.email_usuario %></td>
+                <td><%= usuario.fecha_nacimiento_usuario%></td>
+                <td>
+                    <a href="/rol-por-usuario/asignar-rol/<%= usuario.id %>" class="quitar-link">
+                        <button class="btn btn-outline-primary btn-block estaciado-boton" >Actualizar</button>
+                    </a>
+                    <form action="/usuario/borrar/<%= usuario.id %>" method="POST">
+                        <button class="btn btn-outline-danger btn-block estaciado-boton"  type="submit" > Eliminar</button>
+
+                    </form>
+                </td>
+            </tr>
+            <% }) %>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+</body>
+</html>
+
+

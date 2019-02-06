@@ -118,6 +118,7 @@ export class UsuarioController {
         const parametrosConsulta = `?accion=borrar&nombre=${usuarioEncontrado.nombre_usuario}`;
 
         response.redirect('/usuario/inicio' + parametrosConsulta);
+
     }
 
 
