@@ -1,12 +1,25 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import * as ejs from 'ejs';
+import * as FileSession from 'session-file-store';
+import * as session from 'express-session';
 import * as express from 'express';
+
+const FileStore = FileSession(session);
+
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  app.set('view engine', 'ejs');
-  app.use(express.static('publico'));
-  await app.listen(3000);
+    const app = await NestFactory.create(AppModule);
+    app.use(
+        session({
+            secret: 'secreto',
+            resave: false,
+            saveUninitialized: true,
+            cookie: {secure: false},
+            store: new FileStore()
+        })
+    )
+    app.set('view engine', 'ejs');
+    app.use(express.static('publico'));
+    await app.listen(3000);
+
 }
 bootstrap();
-

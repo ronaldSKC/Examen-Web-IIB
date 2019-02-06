@@ -12,18 +12,18 @@ import { EventoPeliculaModule } from './evento-pelicula/evento.module';
 import { EventoPeliculaEntity } from './evento-pelicula/evento.entity';
 import {UsuarioModule} from "./usuario/usuario.module";
 import {UsuarioEntity} from "./usuario/usuario.entity";
+import {RolModule} from "./rol/rol.module";
+import {RolPorUsuarioModule} from "./rolPorUsuario/rolPorUsuario.module";
+import {RolEntity} from "./rol/rol.entity";
+import {RolPorUsuarioEntity} from "./rolPorUsuario/rolPorUsuario.entity";
 
 @Module({
   imports: [
-    ActorModule,
-    PeliculaModule,
-    EventoModule,
-    EventoPeliculaModule,
-      UsuarioModule,
+
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
-      port: 32771,
+      port: 32769,
       username: 'admin',
       password: '12345678',
       database: 'web-2018',
@@ -34,9 +34,15 @@ import {UsuarioEntity} from "./usuario/usuario.entity";
         PeliculaEntity,
         EventoEntity,
         EventoPeliculaEntity,
+          RolEntity,
+          RolPorUsuarioEntity,
           UsuarioEntity
       ],
-    }),ActorModule
+    }),ActorModule,
+      RolPorUsuarioModule,
+      RolModule,
+      UsuarioModule
+
   ],
   controllers: [AppController],
   providers: [AppService],
