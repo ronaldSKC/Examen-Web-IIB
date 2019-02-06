@@ -30,8 +30,9 @@ export class EventoPeliculaController {
     ){
         let peliculas : EventoPeliculaEntity[]
         peliculas = await this._eventoPeliculaService.findAll()
-        
-        res.render('evento-pelicula',{arreglo: peliculas})
+        const result = peliculas.filter(user => user.evento.id === 1);
+        console.log('respuesta map',result)
+        res.render('evento-pelicula') 
     }
     @Post('crear')
     create(
