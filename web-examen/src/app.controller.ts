@@ -14,20 +14,20 @@ export class AppController {
 
 
     @Get('login')
-
     credenciales(
-        @Res() response
+        @Res() response,
+
     ) {
+
         response.render('login')
     }
 
     @Post('credenciales')
-    @HttpCode(200)
     async metodoCrendenciales(
         @Res() response,
         @Session() session,
         @Body('email_usuario') username_email,
-        @Body('password') password
+        @Body('password') password,
     ) {
         console.log(username_email, password)
         const usuario = new CredencialesDto
@@ -40,7 +40,6 @@ export class AppController {
         } else {
             const respuestaAutenticacion = await this._usuarioService.credenciales(usuario)
 
-            console.log(respuestaAutenticacion)
             if(respuestaAutenticacion){
                 const idUsuario= respuestaAutenticacion.id;
                 const rolUsuario = await this._rolPorUsuarioService.verificarRol(+idUsuario)
@@ -55,14 +54,14 @@ export class AppController {
                             response.redirect('/usuario/crear-usuario')
                             break;
                         case 'administrador':
-                            response.redirect('/usuario/crear-usuario')
+                            response.redirect('/usuario/inicio')
                             break;
                         default:
-                            response.send('Aun no se ha asignado una tarea para este rol')
+                            response.redirect('login')
                     }
                 }else{
-                   throw new BadRequestException({mensaje: 'Error login'})
 
+                    response.redirect('login')
                 }
             }  else{
                 response.redirect('login')
@@ -74,13 +73,13 @@ export class AppController {
 
     @Get('logout')
     async logout(
-        @Res() response,
-        @Session() sesion
+        @Res() res,
+        @Session() sesion,
     )
     {
         sesion.usuario = undefined;
         sesion.destroy()
-        response.redirect('login')
+        res.redirect('login')
     }
 
 }

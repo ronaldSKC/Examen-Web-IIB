@@ -7,7 +7,7 @@ export class CredencialesDto{
     email_usuario?:string;
 
 
-    @Matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,16}$/)
+   // @Matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,16}$/)
     @IsString()
     @IsNotEmpty()
     password_usuario?:string;
