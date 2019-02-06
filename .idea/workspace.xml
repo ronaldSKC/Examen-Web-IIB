@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe140aad-7ba3-43ca-b2a0-493a5a0190df" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/publico/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/publico/bootstrap/js/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/publico/js/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/publico/bootstrap/js/popper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/sessions/S32O8RUkMDzbXMdMZj-LPV0cQ4AfjdkR.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/sessions/TzHgntudrjQxxcwE8PA9h-tMROeu59Bm.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/sessions/YSlo69YdFeHEY6UMVnqdIBD3ItnszboU.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/sessions/jSQFz4XugUy78kFwLiQybM2AuJq4-xhr.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/sessions/mR2dEB9epSx3EMzMaPpfy4NgwBLO5UMB.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/sessions/xWs2I7IzFwYK8t7yFsWrBFcdgpwEoEg2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/sessions/yynYZu2vEp6-aFTxix4_459S4A_vqVt5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/app.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/views/crear-usuario.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/views/crear-usuario.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/views/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-examen/sessions/PHDa9z7LFkMsE91lxGYaeBM3EdB5hrwU.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/sessions/PHDa9z7LFkMsE91lxGYaeBM3EdB5hrwU.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,7 +25,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rolPorUsuario.controller.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web-examen/src/main.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rolPorUsuario.controller.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-examen/src/rolPorUsuario/rolPorUsuario.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
@@ -121,7 +117,7 @@
       <path value="$PROJECT_DIR$/web-examen/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -150,26 +146,6 @@
               <item name="Examen-Web-IIB" type="462c0819:PsiDirectoryNode" />
               <item name="web-examen" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Examen-Web-IIB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Examen-Web-IIB" type="462c0819:PsiDirectoryNode" />
-              <item name="web-examen" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="rolPorUsuario" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Examen-Web-IIB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Examen-Web-IIB" type="462c0819:PsiDirectoryNode" />
-              <item name="web-examen" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="usuario" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Examen-Web-IIB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Examen-Web-IIB" type="462c0819:PsiDirectoryNode" />
-              <item name="web-examen" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -227,26 +203,25 @@
       <workItem from="1549371616966" duration="2969000" />
       <workItem from="1549385663976" duration="11362000" />
       <workItem from="1549409915068" duration="7858000" />
-      <workItem from="1549457324600" duration="3352000" />
+      <workItem from="1549457324600" duration="4961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67558000" />
+    <option name="totallyTimeSpent" value="69167000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="676" y="0" width="697" height="735" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32843137" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.24279211" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.2470238" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50224215" side_tool="true" weight="0.21440823" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3267974" />
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49775785" visible="true" weight="0.04809287" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49775785" visible="true" weight="0.34313726" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -552,16 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-examen/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="51" lean-forward="true" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/views/asignar-roles.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
@@ -580,6 +545,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="90" column="1" lean-forward="true" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
