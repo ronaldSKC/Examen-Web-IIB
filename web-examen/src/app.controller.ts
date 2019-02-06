@@ -1,10 +1,10 @@
-import {BadRequestException, Body, Controller, Get, Post, Res, Session} from '@nestjs/common';
+import {BadRequestException, Body, Controller, Get, HttpCode, Post, Res, Session} from '@nestjs/common';
 import { AppService } from './app.service';
 import {UsuarioService} from "./usuario/usuario.service";
 import {RolPorUsuarioService} from "./rolPorUsuario/rolPorUsuario.service";
 import {validate} from "class-validator";
 import {CredencialesDto} from "./dto/credenciales.dto";
-import {RolService} from "./rol/rol.service";
+
 
 @Controller()
 export class AppController {
@@ -14,18 +14,20 @@ export class AppController {
 
 
     @Get('login')
+
     credenciales(
-        @Res() response,
+        @Res() response
     ) {
         response.render('login')
     }
 
     @Post('credenciales')
+    @HttpCode(200)
     async metodoCrendenciales(
         @Res() response,
         @Session() session,
         @Body('email_usuario') username_email,
-        @Body('password') password,
+        @Body('password') password
     ) {
         console.log(username_email, password)
         const usuario = new CredencialesDto
@@ -53,13 +55,13 @@ export class AppController {
                             response.redirect('/usuario/crear-usuario')
                             break;
                         case 'administrador':
-                            response.redirect('/usuario/inicio')
+                            response.redirect('/usuario/crear-usuario')
                             break;
                         default:
                             response.send('Aun no se ha asignado una tarea para este rol')
                     }
                 }else{
-                    //throw new BadRequestException({mensaje: 'Espere estamos verificando sus datos'})
+                   throw new BadRequestException({mensaje: 'Error login'})
 
                 }
             }  else{
@@ -72,13 +74,13 @@ export class AppController {
 
     @Get('logout')
     async logout(
-        @Res() res,
-        @Session() sesion,
+        @Res() response,
+        @Session() sesion
     )
     {
         sesion.usuario = undefined;
         sesion.destroy()
-        res.redirect('login')
+        response.redirect('login')
     }
 
 }

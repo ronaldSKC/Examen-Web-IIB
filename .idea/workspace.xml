@@ -2,33 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe140aad-7ba3-43ca-b2a0-493a5a0190df" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/web-examen/src/dto/credenciales.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-examen/src/usuario/guards.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-examen/views/asignar-roles.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-examen/views/crear-rol.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-examen/views/tabla-usuarios-administrador.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-examen/views/tabla-usuarios.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-examen/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-examen/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/app.controller.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-examen/publico/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/publico/bootstrap/js/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-examen/publico/js/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/publico/bootstrap/js/popper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-examen/sessions/S32O8RUkMDzbXMdMZj-LPV0cQ4AfjdkR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-examen/sessions/TzHgntudrjQxxcwE8PA9h-tMROeu59Bm.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-examen/sessions/YSlo69YdFeHEY6UMVnqdIBD3ItnszboU.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-examen/sessions/jSQFz4XugUy78kFwLiQybM2AuJq4-xhr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-examen/sessions/mR2dEB9epSx3EMzMaPpfy4NgwBLO5UMB.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-examen/sessions/xWs2I7IzFwYK8t7yFsWrBFcdgpwEoEg2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-examen/sessions/yynYZu2vEp6-aFTxix4_459S4A_vqVt5.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web-examen/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/app.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-examen/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-examen/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/rol/rol-create-dto/rol-create.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/rol/rol-create-dto/rol-create.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/rol/rol.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/rol/rol.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/rol/rol.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/rol/rol.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/rol/rol.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/rol/rol.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/rol/rol.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/rol/rol.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/rolPorUsuario/rolPorUsuario.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/rolPorUsuario/rolPorUsuario.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/rolPorUsuario/rolPorUsuario.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/rolPorUsuario/rolPorUsuario.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/rolPorUsuario/rolPorUsuario.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/rolPorUsuario/rolPorUsuario.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/rolPorUsuario/rolPorUsuario.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/rolPorUsuario/rolPorUsuario.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/usuario/usuario-create-dto/usuario-create.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/usuario/usuario-create-dto/usuario-create.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/usuario/usuario.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/usuario/usuario.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/usuario/usuario.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/usuario/usuario.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/usuario/usuario.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/usuario/usuario.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/usuario/usuario.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/usuario/usuario.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-examen/views/crear-usuario.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/views/crear-usuario.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-examen/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/views/login.ejs" afterDir="false" />
     </list>
@@ -44,68 +32,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-examen/src/main.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="3" column="41" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-examen/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+            <state relative-caret-position="364">
+              <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="response.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-examen/node_modules/@nestjs/core/node_modules/express/lib/response.js">
+      <file leaf-file-name="rolPorUsuario.controller.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web-examen/src/rolPorUsuario/rolPorUsuario.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11220">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="493">
+              <caret line="90" column="1" lean-forward="true" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-examen/node_modules/@nestjs/core/node_modules/express/lib/router/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="283" column="6" selection-start-line="283" selection-start-column="6" selection-end-line="283" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.controller.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-examen/src/app.controller.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1338">
-              <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#94#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-examen/src/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-examen/src/app.service.ts">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -149,18 +91,19 @@
         <option value="$PROJECT_DIR$/web-examen/src/rolPorUsuario/rolPorUsuario.module.ts" />
         <option value="$PROJECT_DIR$/web-examen/src/rolPorUsuario/rolPorUsuario.service.ts" />
         <option value="$PROJECT_DIR$/web-examen/src/rol/rol-create-dto/rol-create.dto.ts" />
-        <option value="$PROJECT_DIR$/web-examen/views/crear-usuario.ejs" />
         <option value="$PROJECT_DIR$/web-examen/views/asignar-roles.ejs" />
-        <option value="$PROJECT_DIR$/web-examen/views/login.ejs" />
         <option value="$PROJECT_DIR$/web-examen/views/tabla-usuarios-administrador.ejs" />
         <option value="$PROJECT_DIR$/web-examen/views/tabla-usuarios.ejs" />
-        <option value="$PROJECT_DIR$/web-examen/src/app.controller.ts" />
         <option value="$PROJECT_DIR$/web-examen/src/dto/credenciales.dto.ts" />
         <option value="$PROJECT_DIR$/web-examen/src/usuario/usuario-create-dto/usuario-create.dto.ts" />
-        <option value="$PROJECT_DIR$/web-examen/src/app.module.ts" />
-        <option value="$PROJECT_DIR$/web-examen/src/main.ts" />
         <option value="$PROJECT_DIR$/web-examen/src/app.controller.spec.ts" />
         <option value="$PROJECT_DIR$/web-examen/package.json" />
+        <option value="$PROJECT_DIR$/web-examen/src/app.module.ts" />
+        <option value="$PROJECT_DIR$/web-examen/src/usuario/guards.ts" />
+        <option value="$PROJECT_DIR$/web-examen/src/main.ts" />
+        <option value="$PROJECT_DIR$/web-examen/views/login.ejs" />
+        <option value="$PROJECT_DIR$/web-examen/src/app.controller.ts" />
+        <option value="$PROJECT_DIR$/web-examen/views/crear-usuario.ejs" />
       </list>
     </option>
   </component>
@@ -190,7 +133,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -213,17 +155,32 @@
               <item name="Examen-Web-IIB" type="b2602c69:ProjectViewProjectNode" />
               <item name="Examen-Web-IIB" type="462c0819:PsiDirectoryNode" />
               <item name="web-examen" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="rolPorUsuario" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Examen-Web-IIB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Examen-Web-IIB" type="462c0819:PsiDirectoryNode" />
+              <item name="web-examen" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="usuario" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Examen-Web-IIB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Examen-Web-IIB" type="462c0819:PsiDirectoryNode" />
+              <item name="web-examen" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/eguez-sarzosa-vicente-adrian-01-Javascript_GR/03-http" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -232,6 +189,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ale\Documents\GitHub\Examen-Web-IIB\web-examen\publico\bootstrap\js" />
       <recent name="C:\Users\Ale\Documents\GitHub\Examen-Web-IIB\web-examen\src\usuario\usuario-create-dto" />
     </key>
   </component>
@@ -268,25 +226,27 @@
       <workItem from="1549327024531" duration="11278000" />
       <workItem from="1549371616966" duration="2969000" />
       <workItem from="1549385663976" duration="11362000" />
-      <workItem from="1549409915068" duration="4942000" />
+      <workItem from="1549409915068" duration="7858000" />
+      <workItem from="1549457324600" duration="3352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61290000" />
+    <option name="totallyTimeSpent" value="67558000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="676" y="0" width="697" height="735" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32843137" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.3452381" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.24279211" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50224215" side_tool="true" weight="0.21440823" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32843137" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3267974" />
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49775785" visible="true" weight="0.32352942" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49775785" visible="true" weight="0.04809287" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -316,19 +276,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web-examen/src/actor/actor.module.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-examen/node_modules/@nestjs/core/nest-application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="204" column="24" selection-start-line="204" selection-start-column="24" selection-end-line="204" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-examen/src/evento/evento.module.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/src/actor/actor.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -377,49 +324,19 @@
     <entry file="file://$PROJECT_DIR$/web-examen/sessions/S32O8RUkMDzbXMdMZj-LPV0cQ4AfjdkR.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-examen/sessions/yynYZu2vEp6-aFTxix4_459S4A_vqVt5.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/sessions/TzHgntudrjQxxcwE8PA9h-tMROeu59Bm.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/sessions/jSQFz4XugUy78kFwLiQybM2AuJq4-xhr.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-examen/sessions/ZVotA1NFMhn0ZajEgTLLuQiIsbfC78Z_.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/src/rolPorUsuario/rolPorUsuario-create-dto/rolPorUsuario-create.dto.ts">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-examen/views/crear-rol.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-examen/src/usuario/guards.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/src/usuario/usuario.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1133">
           <caret line="42" column="35" lean-forward="true" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#166#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-examen/src/usuario/usuario.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -492,41 +409,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-examen/src/rolPorUsuario/rolPorUsuario.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#80#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/src/rol/rol-create-dto/rol-create.dto.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-examen/views/crear-usuario.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="70" column="7" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-examen/views/asignar-roles.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" column="7" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-examen/views/login.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="7" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -551,13 +437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-examen/views/tabla-usuarios.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/src/usuario/usuario-create-dto/usuario-create.dto.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -570,48 +449,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/node_modules/express-session/session/cookie.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-255" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/node_modules/express-session/session/memory.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2907">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-2907" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/node_modules/express-session/session/session.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-examen/src/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-        </state>
+        <state relative-caret-position="-663" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/src/app.service.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/src/app.controller.spec.ts" />
     <entry file="file://$PROJECT_DIR$/web-examen/node_modules/@nestjs/core/node_modules/express/lib/response.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11220">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-11220" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/node_modules/@nestjs/core/node_modules/express/lib/router/index.js">
@@ -621,37 +478,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-examen/src/app.controller.spec.ts">
+    <entry file="file://$PROJECT_DIR$/web-examen/sessions/JI4RSUnlztHF5RR9RuKD41RFc2e5EKo1.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/sessions/ZVotA1NFMhn0ZajEgTLLuQiIsbfC78Z_.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/sessions/yynYZu2vEp6-aFTxix4_459S4A_vqVt5.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/sessions/YSlo69YdFeHEY6UMVnqdIBD3ItnszboU.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/sessions/xWs2I7IzFwYK8t7yFsWrBFcdgpwEoEg2.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/src/usuario/guards.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/views/crear-usuario.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/views/crear-rol.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/views/tabla-usuarios.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/src/usuario/usuario.entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/src/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/src/app.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1338">
-          <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
           <folding>
-            <element signature="e#0#94#0" expanded="true" />
+            <element signature="e#0#104#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/views/login.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="51" column="15" lean-forward="true" selection-start-line="51" selection-start-column="15" selection-end-line="51" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="3" column="41" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="41" />
+        <state relative-caret-position="204">
+          <caret line="12" column="51" lean-forward="true" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/views/asignar-roles.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        <state relative-caret-position="364">
+          <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/src/rolPorUsuario/rolPorUsuario.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="90" column="1" lean-forward="true" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
         </state>
       </provider>
     </entry>
