@@ -23,6 +23,7 @@ export class EventoPeliculaController {
         return this._eventoPeliculaService.findOne(id);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     @Get()
     async verPeliculas(
         @Res() res,
@@ -33,6 +34,9 @@ export class EventoPeliculaController {
         console.log('respuesta map',result)
         res.render('evento-pelicula') 
     }
+=======
+
+>>>>>>> parent of 34b389a... peliculas en crear-evento
 =======
 
 >>>>>>> parent of 34b389a... peliculas en crear-evento
