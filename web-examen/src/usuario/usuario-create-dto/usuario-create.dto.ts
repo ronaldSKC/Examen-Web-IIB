@@ -17,7 +17,7 @@ export class UsuarioDto {
     id?:number;
 
     @IsNotEmpty()
- //   @IsAlpha()
+    @Matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[ ]).{2,20}$/)
     nombre_usuario?:string;
 
 
@@ -32,8 +32,8 @@ export class UsuarioDto {
     password_usuario?:string;
 
 
-    @IsDate()
+    @IsString()
     @IsNotEmpty()
-    fecha_nacimiento_usuario?:Date;
+    fecha_nacimiento_usuario?:string;
 
 }
