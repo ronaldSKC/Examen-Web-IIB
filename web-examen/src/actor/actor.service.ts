@@ -1,4 +1,4 @@
-import { Injectable } from "@nestjs/common";
+import { Injectable, Inject, forwardRef } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Repository, FindOneOptions, FindManyOptions } from "typeorm";
 import { ActorEntity } from "./actor.entity";
@@ -16,7 +16,8 @@ export class ActorService {
     constructor(
         @InjectRepository(ActorEntity)
         private readonly _usuarioRepository: Repository<ActorEntity>,
-        
+        @Inject(forwardRef(()=>PeliculaService))
+        private readonly peliculaService:PeliculaService,
     ) { }
 
     async findOne(id: number) {

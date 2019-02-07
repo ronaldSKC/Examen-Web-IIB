@@ -1,7 +1,8 @@
-import { Controller, Get, Param, Post, Body, Delete, Req } from "@nestjs/common";
+import { Controller, Get, Param, Post, Body, Delete, Req, Res } from "@nestjs/common";
 import { EventoCreateDto } from "src/actor/actor-create-dto/actor-create.dto";
 import { EventoUpdateDto } from "./evento-update-dto/evento-update.dto";
 import { EventoService } from "./evento.service";
+import { ActorCreateDto } from "./evento-create-dto/evento-create.dto";
 
 
 @Controller('evento')
@@ -23,11 +24,27 @@ export class EventoController {
     ) {
         return this._eventoService.findOne(id);
     }
-
-    @Post('crear')
+    @Get('crear-evento')
+    crearEvento(
+        @Res() res
+    ){
+        res.render('crear-evento')
+    }
+    @Get()
+    async irAEvento(
+        @Res() res
+    ){
+        let eventos :  ActorCreateDto[]
+        eventos= await this._eventoService.findAll()
+        res.render("evento",{
+            arreglo: eventos
+        })
+    }
+    @Post('crear-evento')
     create(
-        @Body() eventoCrear: EventoCreateDto
+        @Body() eventoCrear: ActorCreateDto
     ) {
+        
         return this._eventoService.create(eventoCrear);
     }
 

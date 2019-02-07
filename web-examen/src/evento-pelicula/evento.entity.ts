@@ -14,4 +14,4 @@ export class EventoPeliculaEntity{
     @ManyToOne(type => EventoEntity, evento => evento.id, {eager: true})
     evento: EventoEntity;
 
-}
+}     

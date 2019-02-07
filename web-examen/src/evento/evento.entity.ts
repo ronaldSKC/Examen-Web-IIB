@@ -14,10 +14,10 @@ export class EventoEntity{
     @Column({type: 'varchar', length:10})
     fecha: string;
     
-    @Column({type: 'decimal'})
+    @Column({type: 'float'})
     latitud: number;
 
-    @Column({type: 'decimal'})
+    @Column({type: 'float'})
     longitud: number;
 
     @OneToMany(type => EventoPeliculaEntity, eventoPelicula => eventoPelicula.id)

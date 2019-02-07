@@ -18,9 +18,11 @@ async function bootstrap() {
             store: new FileStore(),
         }),
     );
+
     app.set('view engine', 'ejs');
     app.use(express.static('publico'));
     await app.listen(3001);
+
 
 }
 bootstrap();
