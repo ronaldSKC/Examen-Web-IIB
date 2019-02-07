@@ -54,9 +54,12 @@ export class ActorController {
         }
         let peliculas: PeliculaEntity[];
         peliculas = await this._peliculaService.findAll();
+        const actores = peliculas.forEach((act)=>{act.actor})
+        console.log(peliculas)
         res.render(
             'crear-actor', {
                 arreglo: peliculas, // AQUI!
+                arregloActores: actores,
                 booleano: false,
                 mensaje: mensaje,
                 clase: clase,
@@ -66,6 +69,7 @@ export class ActorController {
     @Post('crear-actor')
     create(
         @Body() actorCrear: EventoCreateDto,
+        @Res() res,
     ) {
         const actorCrearNew = {
             nombres: actorCrear.nombres,
@@ -74,6 +78,7 @@ export class ActorController {
             numeroPeliculas: Number(actorCrear.numeroPeliculas),
             retirado: Boolean(actorCrear.retirado),
         };
+        res.redirect("/evento/crear-evento")
         return this._actorService.create(actorCrearNew);
     }
 

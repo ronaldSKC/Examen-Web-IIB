@@ -88,7 +88,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <% arreglo.forEach( (movie)=> { %>
+                    <% arreglo.map( (movie)=> { %>
                     <tr>
                         <td>
                             <%= movie.nombre%>
@@ -106,7 +106,7 @@
                             <%= movie.sinopsis%>
                         </td>
                         <td>
-                            <%= movie.actor%>
+                            <% arregloActores%>
                         </td>
                     </tr>
                     <% }) %>

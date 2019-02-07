@@ -22,7 +22,20 @@ export class EventoPeliculaController {
     ) {
         return this._eventoPeliculaService.findOne(id);
     }
+<<<<<<< HEAD
+    @Get()
+    async verPeliculas(
+        @Res() res,
+    ){
+        let peliculas : EventoPeliculaEntity[]
+        peliculas = await this._eventoPeliculaService.findAll()
+        const result = peliculas.filter(user => user.evento.id === 1);
+        console.log('respuesta map',result)
+        res.render('evento-pelicula') 
+    }
+=======
 
+>>>>>>> parent of 34b389a... peliculas en crear-evento
     @Post('crear')
     create(
         @Body() eventoPeliculaCrear: EventoPeliculaCreateDto

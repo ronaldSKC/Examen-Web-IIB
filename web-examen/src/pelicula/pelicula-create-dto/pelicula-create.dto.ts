@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsString, IsOptional, IsInt } from "class-validator";
+import { IsNotEmpty, IsString, IsOptional, IsInt, IsNumber } from "class-validator";
 
 export class PeliculaCreateDto {
 
@@ -25,4 +25,7 @@ export class PeliculaCreateDto {
     @IsString()
     sinopsis: string;
 
+    @IsNotEmpty()
+    @IsNumber()
+    actor: any
 }
