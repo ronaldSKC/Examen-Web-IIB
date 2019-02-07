@@ -17,7 +17,7 @@ export class UsuarioDto {
     id?:number;
 
     @IsNotEmpty()
-    @Matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[ ]).{2,20}$/)
+    @IsAlpha()
     nombre_usuario?:string;
 
 
@@ -26,7 +26,7 @@ export class UsuarioDto {
     email_usuario?:string;
 
 
-   // @Matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,16}$/)
+    @Matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,16}$/)
     @IsString()
     @IsNotEmpty()
     password_usuario?:string;

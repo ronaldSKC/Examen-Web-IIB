@@ -10,12 +10,12 @@ import { EventoModule } from './evento/evento.module';
 import { EventoEntity } from './evento/evento.entity';
 import { EventoPeliculaModule } from './evento-pelicula/evento.module';
 import { EventoPeliculaEntity } from './evento-pelicula/evento.entity';
-import {UsuarioModule} from "./usuario/usuario.module";
-import {UsuarioEntity} from "./usuario/usuario.entity";
-import {RolModule} from "./rol/rol.module";
-import {RolPorUsuarioModule} from "./rolPorUsuario/rolPorUsuario.module";
-import {RolEntity} from "./rol/rol.entity";
-import {RolPorUsuarioEntity} from "./rolPorUsuario/rolPorUsuario.entity";
+import {UsuarioModule} from './usuario/usuario.module';
+import {UsuarioEntity} from './usuario/usuario.entity';
+import {RolModule} from './rol/rol.module';
+import {RolPorUsuarioModule} from './rolPorUsuario/rolPorUsuario.module';
+import {RolEntity} from './rol/rol.entity';
+import {RolPorUsuarioEntity} from './rolPorUsuario/rolPorUsuario.entity';
 
 @Module({
   imports: [
@@ -23,7 +23,7 @@ import {RolPorUsuarioEntity} from "./rolPorUsuario/rolPorUsuario.entity";
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
-      port: 32775,
+      port: 32769,
       username: 'admin',
       password: '12345678',
       database: 'web-2018',
@@ -36,12 +36,13 @@ import {RolPorUsuarioEntity} from "./rolPorUsuario/rolPorUsuario.entity";
         EventoPeliculaEntity,
           RolEntity,
           RolPorUsuarioEntity,
-          UsuarioEntity
+          UsuarioEntity,
       ],
-    }),ActorModule,
+    }),
+      ActorModule,
       RolPorUsuarioModule,
       RolModule,
-      UsuarioModule
+      UsuarioModule,
 
   ],
   controllers: [AppController],

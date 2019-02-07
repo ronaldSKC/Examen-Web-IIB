@@ -16,6 +16,16 @@
 
 <body>
 <div class="container">
+    <% const existeMensaje = typeof mensaje !== "undefined"? true : false;%>
+
+    <% if (existeMensaje){%>
+    <div class="alert alert-primary" role="alert">
+        <span class="font-weight-bold">
+        MENSAJE:
+        </span> <%=mensaje%>
+
+    </div>
+    <%}%>
 <div class="row">
     <div class="col-md-3 titulo"></div>
     <div class="col-md-5 titulo">

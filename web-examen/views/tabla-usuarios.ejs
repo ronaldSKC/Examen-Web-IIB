@@ -13,7 +13,7 @@
 <body>
 <div class="container">
 
-    <% const existeMensaje = typeof mensaje !== "undefined"%>
+    <% const existeMensaje = typeof mensaje !== "undefined"? true : false;%>
 
     <% if (existeMensaje){%>
     <div class="alert alert-primary" role="alert">
