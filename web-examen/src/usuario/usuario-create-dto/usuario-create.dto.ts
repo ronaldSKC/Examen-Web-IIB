@@ -7,8 +7,9 @@ import {
     IsEmail,
     MinLength,
     MaxLength,
-    Matches, IsAlpha, IsDate
-} from "class-validator";
+    Matches, IsAlpha, IsDate, IsNotIn
+} from 'class-validator';
+import {max, min} from 'rxjs/operators';
 
 export class UsuarioDto {
 
@@ -17,7 +18,8 @@ export class UsuarioDto {
     id?:number;
 
     @IsNotEmpty()
-    @Matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[ ]).{2,20}$/)
+    @Matches(/^[a-zA-Z\s]{1,45}$/)
+
     nombre_usuario?:string;
 
 
@@ -25,10 +27,11 @@ export class UsuarioDto {
     @IsEmail()
     email_usuario?:string;
 
-
-   // @Matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,16}$/)
+    @MinLength(8)
+    @Matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,14}$/)
     @IsString()
-    @IsNotEmpty()
+        @IsNotEmpty()
+
     password_usuario?:string;
 
 

@@ -13,7 +13,7 @@
 <body>
 <div class="container">
 
-    <% const existeMensaje = typeof mensaje !== "undefined"%>
+    <% const existeMensaje = typeof mensaje !== "undefined"? true : false;%>
 
     <% if (existeMensaje){%>
     <div class="alert alert-primary" role="alert">
@@ -71,7 +71,7 @@
                     <a href="/rol-por-usuario/asignar-rol/<%= usuario.id %>" class="quitar-link">
                         <button class="btn btn-outline-primary btn-block estaciado-boton" >Actualizar</button>
                     </a>
-                    <form action="/usuario/borrar/<%= usuario.id %>" method="POST">
+                    <form action="/usuario/borrar/<%= usuario.id %>"  method="POST">
                         <button class="btn btn-outline-danger btn-block estaciado-boton"  type="submit" > Eliminar</button>
 
                     </form>
@@ -82,6 +82,9 @@
         </table>
 
     </div>
+    <a href="/login">
+        <button class="btn btn-outline-info " align="center">Logout</button>
+    </a>
 </div>
 
 

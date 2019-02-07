@@ -7,32 +7,42 @@ import {
     ForbiddenException,
     Param,
     BadRequestException,
-    Session, Query
-} from "@nestjs/common";
-import {FindManyOptions, Repository} from "typeorm";
-import { UsuarioEntity } from "./usuario.entity";
-import {UsuarioService} from "./usuario.service";
-import {Like} from "typeorm";
-import {validate, ValidationError} from "class-validator";
-import {UsuarioDto} from "./usuario-create-dto/usuario-create.dto";
-
+    Session, Query,
+} from '@nestjs/common';
+import {FindManyOptions, Repository} from 'typeorm';
+import { UsuarioEntity } from './usuario.entity';
+import {UsuarioService} from './usuario.service';
+import {Like} from 'typeorm';
+import {validate, ValidationError} from 'class-validator';
+import {UsuarioDto} from './usuario-create-dto/usuario-create.dto';
 
 @Controller('usuario')
 
 export class UsuarioController {
 
     constructor(
-        private readonly _usuarioService: UsuarioService
+        private readonly _usuarioService: UsuarioService,
     ) {
     }
-
-
 
     @Get('crear-usuario')
     crearUsuario(
         @Res() response,
+        @Query('mensaje') mensaje: string,
     ) {
-        response.render('crear-usuario')
+
+        if (mensaje) {
+            response.render(
+                'crear-usuario', {
+                    mensaje: mensaje,
+                }
+            )
+        }
+        else {
+            response.render(
+                'crear-usuario'
+            )
+        }
     }
 
     @Post('crear-usuario')
@@ -40,7 +50,7 @@ export class UsuarioController {
         @Res() response,
         @Body() usuarioCrear,
     ) {
-        const usuario = new UsuarioDto
+        const usuario = new UsuarioDto;
         usuario.nombre_usuario = usuarioCrear.nombre;
         usuario.email_usuario = usuarioCrear.email;
         usuario.password_usuario = usuarioCrear.password;
@@ -49,7 +59,7 @@ export class UsuarioController {
         const existeErrores = arregloErrores.length > 0;
         if (existeErrores) {
             console.error('Errores: Usuario a crear - ', arregloErrores);
-            throw new BadRequestException('Datos incorrectos');
+            response.render('crear-usuario', {mensaje: 'Datos incorrectos'});
         } else {
             await this._usuarioService.crearUsuario(usuario);
             response.redirect('/login');
@@ -57,16 +67,15 @@ export class UsuarioController {
 
     }
 
-
     @Get('inicio')
     async mostrarUsuario(
         @Res() res,
         @Session() sesion,
-        @Query('accion') accion:string,
-        @Query('nombre') nombre:string,
-        @Query('busqueda') busqueda:string
-    ){
-        if(sesion.rol==='administrador') {
+        @Query('accion') accion: string,
+        @Query('nombre') nombre: string,
+        @Query('busqueda') busqueda: string
+    ) {
+        if (sesion.rol === 'administrador') {
             let mensaje = undefined;
 
             let usuarios: UsuarioEntity[];
@@ -90,27 +99,23 @@ export class UsuarioController {
                 usuarios = await this._usuarioService.buscar();
             }
 
-            res.render('tabla-usuarios',
+            res.render('lista-usuarios',
                 {
                     arregloUsuario: usuarios,
                     mensaje: mensaje,
 
                 })
-        }else{
-            throw new BadRequestException({mensaje: "No tiene acceso a esta vista"});
+        } else {
+            throw new BadRequestException({mensaje: "No hay permisos aun"});
         }
     }
-
-
-
-
 
     @Post('borrar/:idUsuario')
     async borrar(
         @Param('idUsuario') idUsuario: string,
-        @Res() response
+        @Res() response,
     ) {
-        let mensaje = undefined;
+
 
         const usuarioEncontrado = await this._usuarioService
             .buscarPorId(+idUsuario);
@@ -118,16 +123,8 @@ export class UsuarioController {
         await this._usuarioService.borrar(Number(idUsuario));
 
         const parametrosConsulta = `?accion=borrar&nombre=${usuarioEncontrado.nombre_usuario}`;
-         mensaje = usuarioEncontrado.nombre_usuario
         response.redirect('/usuario/inicio' + parametrosConsulta);
 
+
     }
-
-
-
-
-
-
-
-
 }

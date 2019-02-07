@@ -1,7 +1,7 @@
-import {Entity, PrimaryGeneratedColumn, Column, OneToMany} from "typeorm";
-import {EventoPeliculaEntity} from "../evento-pelicula/evento.entity";
-import {RolEntity} from "../rol/rol.entity";
-import {RolPorUsuarioEntity} from "../rolPorUsuario/rolPorUsuario.entity";
+import {Entity, PrimaryGeneratedColumn, Column, OneToMany} from 'typeorm';
+import {EventoPeliculaEntity} from '../evento-pelicula/evento.entity';
+import {RolEntity} from '../rol/rol.entity';
+import {RolPorUsuarioEntity} from '../rolPorUsuario/rolPorUsuario.entity';
 
 @Entity('usuario')
 
@@ -16,7 +16,7 @@ export class UsuarioEntity {
             type: 'varchar',
             length: 30,
             default: 'nombre',
-        }
+        },
     )
     nombre_usuario: string;
 
@@ -26,7 +26,7 @@ export class UsuarioEntity {
             type: 'varchar',
             length: 30,
             default: 'email',
-        }
+        },
     )
     email_usuario: string;
 
@@ -36,26 +36,23 @@ export class UsuarioEntity {
             type: 'varchar',
             length: 30,
             default: '1234',
-        }
+        },
     )
     password_usuario: string;
-
 
     @Column(
         {
             name: 'fecha_nacimiento_usuario',
             type: 'varchar',
             default: '1/1/1995',
-        }
+        },
     )
     fecha_nacimiento_usuario: string;
 
-
     @OneToMany(
         type => RolPorUsuarioEntity,
-        rolPorUsuario => rolPorUsuario.usuario,{eager:true}
+        rolPorUsuario => rolPorUsuario.usuario, {eager: true},
     )
     rolesPorUsuario: RolPorUsuarioEntity[];
-
 
 }

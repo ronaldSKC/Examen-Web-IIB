@@ -16,73 +16,84 @@
 <body>
 
 <div class="container">
+    <% const existeMensaje = typeof mensaje !== "undefined"? true : false;%>
 
-<div class="row">
-    <div class="col-lg-3 titulo"></div>
-    <div class="col-md-4 titulo"> <h1 align="center">LOGIN</h1></div>
+    <% if (existeMensaje){%>
+    <div class="alert alert-primary" role="alert">
+        <span class="font-weight-bold">
+        MENSAJE:
+        </span> <%=mensaje%>
 
-</div>
-<br>
-<div class="row" >
-    <div class="col-md-1 titulo">  </div>
-
-    <div class="col-md-9 titulo"><h2 align="center">Ingresa tus datos personales</h2></div>
-    <div class="col-md-2 titulo"></div>
-
-</div>
-<br>
-
-
-<div class="row">
-    <div class="col-sm-4 titulo">
-        <div class="carousel-item active">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKQYdb5FM_MRHj-GdshIHFL7-CmOdyEp71C49sNQ9DXZCbMVJB3g"
-                 alt="login">
-        </div>
     </div>
-    <div class="col-md-4 titulo">
-        <form action="credenciales" method="Post">
+    <%}%>
 
-            <div class="col-md-7 email_usuario">
+    <div class="row">
+        <div class="col-lg-3 titulo"></div>
+        <div class="col-md-4 titulo"> <h1 align="center">LOGIN</h1></div>
 
-                <div>
-                    <label for="email_usuario"  style=" font-size: 25px">Email:</label>
-                    <input id="email_usuario" type="text" placeholder="correo electrónico" name="email_usuario">
+    </div>
+    <br>
+    <div class="row" >
+        <div class="col-md-1 titulo">  </div>
+
+        <div class="col-md-9 titulo"><h2 align="center">Ingresa tus datos personales</h2></div>
+        <div class="col-md-2 titulo"></div>
+
+    </div>
+    <br>
+
+
+    <div class="row">
+        <div class="col-sm-4 titulo">
+            <div class="carousel-item active">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKQYdb5FM_MRHj-GdshIHFL7-CmOdyEp71C49sNQ9DXZCbMVJB3g"
+                     alt="login">
+            </div>
+        </div>
+        <div class="col-md-5 titulo">
+            <form action="credenciales" method="Post">
+
+                <div class="col-md-7 email_usuario">
+
+                    <div>
+                        <label for="email_usuario"  style=" font-size: 25px">Email:</label>
+                        <input id="email_usuario" type="text" placeholder="correo electrónico" name="email_usuario">
+                    </div>
                 </div>
-            </div>
 
 
-            <div class="col-md-4 password">
+                <div class="col-md-4 password">
 
-                <div>
-                    <label for="password" style=" font-size: 25px">Password:</label>
-                    <input id="password" type="password" placeholder="contraseña" name="password">
+                    <div>
+                        <label for="password" style=" font-size: 25px">Password:</label>
+                        <input id="password" type="password" placeholder="contraseña" name="password">
+                    </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <p style="font-size: 40px">   </p>
-            </div>
-            <div class="row">
-                <p style="font-size: 40px">   </p>
-            </div>
-            <div class="row">
-                <p style="font-size: 40px">   </p>
-            </div>
+                <div class="row">
+                    <p style="font-size: 40px">   </p>
+                </div>
+                <div class="row">
+                    <p style="font-size: 40px">   </p>
+                </div>
+                <div class="row">
+                    <p style="font-size: 40px">   </p>
+                </div>
 
-            <div class="row">
+                <div class="row">
 
                     <button class="btn btn-outline-info " align="center"> Ingresar </button>
+                </div>
+
+
+            </form>
+            <div class="row" style="font-size: 40px">
+
+                <a href="/usuario/crear-usuario"><button class="btn btn-outline-info ">Registrarse</button></a>
+
             </div>
 
-        </form>
-        <div class="row" style="font-size: 40px">
-
-        <a href="/usuario/crear-usuario"><button class="btn btn-outline-info ">Registrarse</button></a>
-
         </div>
-
-    </div>
     </div>
 
 </div>
