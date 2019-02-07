@@ -16,6 +16,7 @@ export class EventoPeliculaService {
     ) { }
 
     async findOne(id: number) {
+        
         return await this._eventoPeliculaRepository.findOne(id);
     }
 

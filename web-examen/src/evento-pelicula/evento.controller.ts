@@ -2,10 +2,7 @@ import { Controller, Get, Param, Post, Body, Delete, Req } from "@nestjs/common"
 import { EventoPeliculaService } from "./evento.service";
 import { EventoPeliculaCreateDto } from "./evento-pelicula-create-dto/evento-pelicula-create.dto";
 import { EventoPeliculaUpdateDto } from "./evento-pelicula-update-dto/evento-pelicula-update.dto";
-<<<<<<< Updated upstream
 import { EventoPeliculaEntity } from "./evento.entity";
-=======
->>>>>>> Stashed changes
 
 @Controller('evento-pelicula')
 
@@ -26,20 +23,6 @@ export class EventoPeliculaController {
     ) {
         return this._eventoPeliculaService.findOne(id);
     }
-<<<<<<< Updated upstream
-    @Get()
-    async verPeliculas(
-        @Res() res,
-    ){
-        let peliculas : EventoPeliculaEntity[]
-        peliculas = await this._eventoPeliculaService.findAll()
-        const result = peliculas.filter(user => user.evento.id === 1);
-        console.log('respuesta map',result)
-        res.render('evento-pelicula') 
-    }
-=======
-
->>>>>>> Stashed changes
     @Post('crear')
     create(
         @Body() eventoPeliculaCrear: EventoPeliculaCreateDto
