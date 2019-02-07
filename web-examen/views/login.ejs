@@ -16,13 +16,16 @@
 <body>
 
 <div class="container">
-    <% const existeMensaje = typeof mensaje !== "undefined" ? true : false; %>
+    <% const existeMensaje = typeof mensaje !== "undefined"? true : false;%>
 
-    <% if(existeMensaje){ %>
-    <div class="animated fadeOut alert alert-<%= accion %>" role="alert">
-        MENSAJE: <%= mensaje %>
+    <% if (existeMensaje){%>
+    <div class="alert alert-primary" role="alert">
+        <span class="font-weight-bold">
+        MENSAJE:
+        </span> <%=mensaje%>
+
     </div>
-    <% } %>
+    <%}%>
 
     <div class="row">
         <div class="col-lg-3 titulo"></div>

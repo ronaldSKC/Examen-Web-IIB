@@ -36,7 +36,6 @@ import {RolPorUsuarioEntity} from './rolPorUsuario/rolPorUsuario.entity';
         PeliculaEntity,
         EventoEntity,
         EventoPeliculaEntity,
-
         RolEntity,
         RolPorUsuarioEntity,
         UsuarioEntity

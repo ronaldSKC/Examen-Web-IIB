@@ -15,11 +15,23 @@ export class AppController {
     @Get('login')
     credenciales(
         @Res() response,
-
+        @Query('mensaje') mensaje: string,
 
     ) {
+        if(mensaje){
+            response.render(
 
-        response.render('login');
+                'login', {
+                    mensaje: mensaje,
+                }
+
+            )
+        }
+        else {
+            response.render('login');
+        }
+
+
     }
 
     @Post('credenciales')
@@ -39,7 +51,10 @@ export class AppController {
         const arregloErrores = await validate(usuario);
         const existeErrores = arregloErrores.length > 0;
         if (existeErrores) {
-            throw new BadRequestException('Datos incorrectos');
+
+            response.render('login', {mensaje: 'Datos incorrectos'})
+
+
         } else {
             const respuestaAutenticacion = await this._usuarioService.credenciales(usuario);
 
@@ -66,15 +81,15 @@ export class AppController {
                     }
                 }else{
 
-                    response.render('login',{mensaje:mensaje})
-                  // throw new BadRequestException({mensaje: 'No tiene permisos aunfddf'});
+//                    response.render('login', {mensaje: 'Datos incorrectos'})
+                  // throw new BadRequestException({mensaje: 'No tiene permisos aunfddf'}); response.render('crear-usuario', {mensaje: 'Datos incorrectos'});
 
                 }
             }  else{
-
+             //   response.render('login', {mensaje: 'Datos incorrectos'})
               // response.render('login')
               //  response.redirect('login?errores=Hay errores');
-               throw new BadRequestException({mensaje: 'No a tiene permisos aun'});
+              throw new BadRequestException({mensaje: 'No a tiene permisos aun'});
 
             }
 

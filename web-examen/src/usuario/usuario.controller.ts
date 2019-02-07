@@ -67,9 +67,7 @@ export class UsuarioController {
         const existeErrores = arregloErrores.length > 0;
         if (existeErrores) {
             console.error('Errores: Usuario a crear - ', arregloErrores);
-            response.render('crear-usuario', {
-                mensaje: 'Datos incorrectos',
-            });
+            response.render('crear-usuario', {mensaje: 'Datos incorrectos'});
         } else {
             await this._usuarioService.crearUsuario(usuario);
             response.redirect('/login');
@@ -125,7 +123,7 @@ export class UsuarioController {
         @Param('idUsuario') idUsuario: string,
         @Res() response,
     ) {
-        let mensaje;
+
 
         const usuarioEncontrado = await this._usuarioService
             .buscarPorId(+idUsuario);
