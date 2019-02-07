@@ -76,7 +76,7 @@ export class AppController {
                             break;
                         default:
 
-                            response.redirect('login');
+                            response.render('login');
 
                     }
                 }else{
