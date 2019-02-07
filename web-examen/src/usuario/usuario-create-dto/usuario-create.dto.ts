@@ -7,7 +7,7 @@ import {
     IsEmail,
     MinLength,
     MaxLength,
-    Matches, IsAlpha
+    Matches, IsAlpha, IsDate
 } from "class-validator";
 
 export class UsuarioDto {
@@ -17,7 +17,7 @@ export class UsuarioDto {
     id?:number;
 
     @IsNotEmpty()
- //   @IsAlpha()
+    @Matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[ ]).{2,20}$/)
     nombre_usuario?:string;
 
 

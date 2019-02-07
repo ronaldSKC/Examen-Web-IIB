@@ -6,48 +6,47 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title> EXAMEN</title>
+    <title>USUARIO</title>
 
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
-
     <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/estilos-generales.css">
 
 </head>
 
 <body>
-
+<div class="container">
 <div class="row">
-    <div class="col-md-4 titulo"></div>
-    <div class="col-md-4 titulo">
+    <div class="col-md-3 titulo"></div>
+    <div class="col-md-5 titulo">
         <h1 align="center">REGISTRO DE USUARIO</h1>
     </div>
     <div class="col-md-4 titulo"></div>
 </div>
 <br>
-<div class="row">
-    <div class="col-md-4 titulo"></div>
-    <div class="col-md-4 titulo">
-        <h2 align="center">Ingresa los datos</h2>
-    </div>
-    <div class="col-md-4 titulo"></div>
+    <div class="row">
+        <div class="col-md-4 titulo">
+            <h2>Ingresa los datos</h2>
+        </div>
+
 </div>
 
 <div class="row">
-    <div class="col-md-4 titulo"></div>
-    <div class="col-md-4 titulo">
+
+    <div class="col-md-3 titulo">
         <form action="crear-usuario" method="Post">
 
             <div >
-                <label for="nombre">Nombre</label>
+                <label for="nombre">Nombre completo</label>
                 <input id="nombre" type="text" name="nombre">
             </div>
 
             <div>
-                <label for="email">Correo</label>
+                <label for="email">Correo electronico</label>
                 <input id="email" type="text" name="email">
             </div>
             <div>
-                <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                <label for="fecha_nacimiento">Fecha de nacimiento</label>
                 <input id="fecha_nacimiento" type="date" min="1900-01-01" max="2019-02-08" name="fecha_nacimiento" max="2019-01-31">
             </div>
             <div>
@@ -55,14 +54,20 @@
                 <input id="password" type="password" name="password">
             </div>
 
-            <div class="col-md-12 text-center">
-                <button class="btn btn-outline-info " align="center">Registrar</button>
+            <div class="col-md-2 text-center">
+                <button class="btn btn-outline-info estaciado-boton " align="center">Registrar</button>
             </div>
         </form>
     </div>
     <div class="col-md-4 titulo"></div>
 
 </div>
-
+<script src="/js/jquery.js"></script>
+<script src="/js/popper.js"></script>
+<script src="/bootstrap/js/bootstrap.js"></script>
+</div>
 </body>
 </html>
+
+
+
