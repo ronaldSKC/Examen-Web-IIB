@@ -29,26 +29,18 @@ export class UsuarioController {
     crearUsuario(
         @Res() response,
         @Query('mensaje') mensaje: string,
-    )
+    ) {
 
-
-
-    {
-
-        if(mensaje){
+        if (mensaje) {
             response.render(
-
                 'crear-usuario', {
                     mensaje: mensaje,
                 }
-
             )
         }
         else {
             response.render(
-
                 'crear-usuario'
-
             )
         }
     }
@@ -79,11 +71,11 @@ export class UsuarioController {
     async mostrarUsuario(
         @Res() res,
         @Session() sesion,
-        @Query('accion') accion:string,
-        @Query('nombre') nombre:string,
-        @Query('busqueda') busqueda:string
-    ){
-        if(sesion.rol==='administrador') {
+        @Query('accion') accion: string,
+        @Query('nombre') nombre: string,
+        @Query('busqueda') busqueda: string
+    ) {
+        if (sesion.rol === 'administrador') {
             let mensaje = undefined;
 
             let usuarios: UsuarioEntity[];
@@ -107,14 +99,14 @@ export class UsuarioController {
                 usuarios = await this._usuarioService.buscar();
             }
 
-            res.render('tabla-usuarios',
+            res.render('lista-usuarios',
                 {
                     arregloUsuario: usuarios,
                     mensaje: mensaje,
 
                 })
-        }else{
-            throw new BadRequestException({mensaje: "No tiene acceso a esta vista"});
+        } else {
+            throw new BadRequestException({mensaje: "No hay permisos aun"});
         }
     }
 
@@ -133,6 +125,6 @@ export class UsuarioController {
         const parametrosConsulta = `?accion=borrar&nombre=${usuarioEncontrado.nombre_usuario}`;
         response.redirect('/usuario/inicio' + parametrosConsulta);
 
-    }
 
+    }
 }
