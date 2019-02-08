@@ -39,6 +39,9 @@ export class EventoPeliculaController {
             tam: tamaño
         })
     }
+
+
+
     @Post('crear')
     create(
         @Body() eventoPeliculaCrear: EventoPeliculaCreateDto

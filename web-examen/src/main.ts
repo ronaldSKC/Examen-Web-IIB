@@ -8,20 +8,21 @@ const FileStore = require('session-file-store')(session);
 async function bootstrap() {
 
     const app = await NestFactory.create(AppModule);
-   app.use(
+    app.use(
         session({
             name: 'server-session-id',
             secret: 'No sera de tomar un traguito',
             resave: false,
             saveUninitialized: true,
             cookie: {secure: false},
-            store: new FileStore()
-        })
+            store: new FileStore(),
+        }),
     );
- 
- 
-  app.set('view engine', 'ejs');
-  app.use(express.static('publico'));
-  await app.listen(3003);
+
+    app.set('view engine', 'ejs');
+    app.use(express.static('publico'));
+    await app.listen(3001);
+
+
 }
 bootstrap();
