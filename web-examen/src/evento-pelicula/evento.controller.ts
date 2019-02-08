@@ -28,12 +28,15 @@ export class EventoPeliculaController {
         @Res() res
     ){
         const eventoPeliculas = this._eventoPeliculaService.findAll()
-        let evel
-       await eventoPeliculas.then((evnt)=>{
-            evel = evnt.filter(peliculas => peliculas.evento.id === 1 )
-        })
+        console.log(eventoPeliculas)
+        const eve = await eventoPeliculas
+        const filter = eve.filter((respuesta)=>{return respuesta.evento.id===1})
+        const tamaño = filter.length
+        console.log(tamaño)
+        console.log(filter[0].id)
         res.render('evento-pelicula',{
-            arreglo: evel
+            arreglo: filter,
+            tam: tamaño
         })
     }
     @Post('crear')

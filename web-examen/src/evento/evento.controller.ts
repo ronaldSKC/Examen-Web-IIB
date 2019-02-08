@@ -72,7 +72,6 @@ export class EventoController {
         for (let numero of eventoCrear.eventoPelicula) {              
             eventoCreado.then((even) => {
                 const eventoPelicula = {
-                   
                     pelicula: numero,
                     evento: even.id
                 }
