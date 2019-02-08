@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post, Body, Delete, Req, Res } from "@nestjs/common";
+import { Controller, Get, Param, Post, Body, Delete, Req, Res, Query } from "@nestjs/common";
 import { EventoCreateDto } from "src/actor/actor-create-dto/actor-create.dto";
 import { EventoUpdateDto } from "./evento-update-dto/evento-update.dto";
 import { EventoService } from "./evento.service";
@@ -7,6 +7,7 @@ import { PeliculaEntity } from "src/pelicula/pelicula.entity";
 import { PeliculaService } from "src/pelicula/pelicula.service";
 import { EventoEntity } from "./evento.entity";
 import { EventoPeliculaService } from "src/evento-pelicula/evento.service";
+import { FindManyOptions, Like } from "typeorm";
 
 
 @Controller('evento')
@@ -32,10 +33,28 @@ export class EventoController {
     }
     @Get()
     async evento(
-        @Res() res
+        @Res() res,
+        @Query('busqueda') busqueda: string,
     ) {
         let eventos : EventoEntity[]
-        eventos= await this._eventoService.findAll()
+        if (busqueda) {
+
+            const consulta: FindManyOptions<EventoEntity> = {
+                where: [
+                    {
+                        nombre: Like(`%${busqueda}%`)
+                    },
+                    {
+                        fecha: Like(`%${busqueda}%`)
+                    }
+                ]
+            };
+
+            eventos = await this._eventoService.findAll(consulta);
+
+        } else {
+            eventos = await this._eventoService.findAll()
+        }
         res.render("evento",{
             arreglo: eventos
         })
