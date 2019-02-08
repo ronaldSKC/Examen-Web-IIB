@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe140aad-7ba3-43ca-b2a0-493a5a0190df" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/app.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-examen/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-examen/publico/css/estilos-generales.css" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/publico/css/estilos-generales.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-examen/sessions/_6mS8NapOHR5KxiuLdRZcQJjQUAz0HzZ.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/sessions/_6mS8NapOHR5KxiuLdRZcQJjQUAz0HzZ.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-examen/views/lista-usuarios.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/web-examen/views/lista-usuarios.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -72,20 +71,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.controller.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.controller.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-examen/src/app.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="74" column="54" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
+            <state relative-caret-position="272">
+              <caret line="78" column="53" lean-forward="true" selection-start-line="78" selection-start-column="53" selection-end-line="78" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lista-usuarios.ejs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="lista-usuarios.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-examen/views/lista-usuarios.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+            <state relative-caret-position="256">
+              <caret line="52" column="47" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="estilos-generales.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-examen/publico/css/estilos-generales.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -140,15 +148,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rol-create.dto.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-examen/src/rol/rol-create-dto/rol-create.dto.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -195,8 +194,9 @@
         <option value="$PROJECT_DIR$/web-examen/views/tabla-usuarios.ejs" />
         <option value="$PROJECT_DIR$/web-examen/src/usuario/usuario.controller.ts" />
         <option value="$PROJECT_DIR$/web-examen/src/app.module.ts" />
-        <option value="$PROJECT_DIR$/web-examen/views/lista-usuarios.ejs" />
         <option value="$PROJECT_DIR$/web-examen/src/app.controller.ts" />
+        <option value="$PROJECT_DIR$/web-examen/publico/css/estilos-generales.css" />
+        <option value="$PROJECT_DIR$/web-examen/views/lista-usuarios.ejs" />
       </list>
     </option>
   </component>
@@ -237,6 +237,19 @@
               <item name="Examen-Web-IIB" type="b2602c69:ProjectViewProjectNode" />
               <item name="Examen-Web-IIB" type="462c0819:PsiDirectoryNode" />
               <item name="web-examen" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Examen-Web-IIB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Examen-Web-IIB" type="462c0819:PsiDirectoryNode" />
+              <item name="web-examen" type="462c0819:PsiDirectoryNode" />
+              <item name="publico" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Examen-Web-IIB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Examen-Web-IIB" type="462c0819:PsiDirectoryNode" />
+              <item name="web-examen" type="462c0819:PsiDirectoryNode" />
+              <item name="publico" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Examen-Web-IIB" type="b2602c69:ProjectViewProjectNode" />
@@ -313,12 +326,12 @@
       <workItem from="1549507010773" duration="5566000" />
       <workItem from="1549548706441" duration="5738000" />
       <workItem from="1549563526592" duration="1900000" />
-      <workItem from="1549630521980" duration="1875000" />
+      <workItem from="1549630521980" duration="2634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91827000" />
+    <option name="totallyTimeSpent" value="92586000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -382,7 +395,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web-examen/sessions/mR2dEB9epSx3EMzMaPpfy4NgwBLO5UMB.json" />
     <entry file="file://$PROJECT_DIR$/web-examen/sessions/S32O8RUkMDzbXMdMZj-LPV0cQ4AfjdkR.json" />
     <entry file="file://$PROJECT_DIR$/web-examen/sessions/TzHgntudrjQxxcwE8PA9h-tMROeu59Bm.json" />
     <entry file="file://$PROJECT_DIR$/web-examen/sessions/jSQFz4XugUy78kFwLiQybM2AuJq4-xhr.json" />
@@ -636,13 +648,6 @@
         <state relative-caret-position="-255" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-examen/views/lista-usuarios.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/src/usuario/usuario.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-135">
@@ -655,8 +660,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-examen/src/app.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="74" column="54" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
+        <state relative-caret-position="272">
+          <caret line="78" column="53" lean-forward="true" selection-start-line="78" selection-start-column="53" selection-end-line="78" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/publico/css/estilos-generales.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-examen/views/lista-usuarios.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="52" column="47" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
         </state>
       </provider>
     </entry>
