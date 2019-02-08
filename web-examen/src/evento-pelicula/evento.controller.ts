@@ -25,12 +25,13 @@ export class EventoPeliculaController {
         return this._eventoPeliculaService.findOne(id);
     }
     
-    @Get('ver-peliculas')
+    @Get('ver-peliculas/:id')
     async ver(
         @Res() res,
+        @Param('id') idEventoPelicula: string
     ) {
         let tamaño : EventoPeliculaEntity[] 
-        tamaño = await this._eventoPeliculaService.obtenerMedicamento(1)
+        tamaño = await this._eventoPeliculaService.obtenerMedicamento(+idEventoPelicula)
         console.log(tamaño)
         res.render('ver-pelicula',{
             arregloEventoPelicula: tamaño

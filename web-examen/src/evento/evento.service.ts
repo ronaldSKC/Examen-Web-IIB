@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
-import { Repository } from "typeorm";
+import { Repository, FindManyOptions } from "typeorm";
 import { EventoEntity } from "./evento.entity";
 import { EventoCreateDto } from "src/actor/actor-create-dto/actor-create.dto";
 import { EventoUpdateDto } from "./evento-update-dto/evento-update.dto";
@@ -20,8 +20,8 @@ export class EventoService {
         return await this._eventoRepository.findOne(id);
     }
 
-    async findAll() {
-        return await this._eventoRepository.find();
+    async findAll(parametros?: FindManyOptions<EventoEntity>): Promise<EventoEntity[]> {
+        return await this._eventoRepository.find(parametros)
     }
 
     async create(datosCrearEvento: ActorCreateDto) {

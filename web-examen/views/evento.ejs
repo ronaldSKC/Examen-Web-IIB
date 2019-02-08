@@ -11,25 +11,27 @@
 
 <body>
     <div class="container">
-        <form action="/evento" method="POST">
-            <div class="row">
-                <h1>Eventos</h1>
-                <div></div>
-            </div>
-            <div class="row">
+            <form action="/evento" method="GET">
+        <div class="row">
+            <h1>Eventos</h1>
+            <div></div>
+        </div>
+        <div class="row">
+            
                 <div class="col-sm-4">
-                    <label for="buscar">Buscar</label>
+                    <label for="busqueda">Buscar</label>
                 </div>
                 <div class="col-sm-6">
-                    <input class="form-control" type="text" id="buscar" name="buscar">
+                    <input class="form-control" type="text" id="busqueda" name="busqueda">
                 </div>
                 <div class="col-sm-2">
                     <button class="btn btn-outline-info btn-block ">Buscar</button>
                 </div>
-            </div>
-            <div class="row">
-            </div>
-        </form>
+            
+        </div>
+    </form>
+        <div class="row">
+        </div>
         <h2>Listado de eventos</h2>
         <div class="scroll-tabla">
             <table class="table table-hover animated slideInLeft">
@@ -50,7 +52,7 @@
                             <%= evento.fecha%>
                         </td>
                         <td>
-                            <a href="/evento/ver-pelicula" class="quitar-link">
+                            <a href="/evento-pelicula/ver-peliculas/<%= evento.id%>" class="quitar-link">
                                 <button class="btn btn-outline-info btn-block estaciado-boton">Ver</button>
                             </a>
                         </td>
