@@ -13,23 +13,29 @@
     <div class="container">
         <br>
             <h1>Eventos</h1>
-        <% const arreglo = typeof tam === "undefined"%>
+            <div class="row">
+                <a href="">
+                        <button class="btn btn-outline-success"> Regresar</button>
+                </a>
+            </div>
         <div class="row">
-           <%= tam.id
-           
-           %>
+           <% arregloEventoPelicula.forEach((eventoPelicula)=>{%>
             <div class="col-sm-4">
                     <div class="card border-info mb-3" style="max-width: 18rem;">
                             <div class="card-header">
-                               
+                          <%= eventoPelicula.pelicula.nombre%>
                             </div>
                             <div class="card-body text-info">
-                              <h5 class="card-title">Info card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <h5 class="card-title">
+                                  <%= eventoPelicula.pelicula.anioLanzamiento%>
+                              </h5>
+                              <p class="card-text">
+                                  <%= eventoPelicula.pelicula.sinopsis%>
+                              </p>
                             </div>
                           </div>
             </div>
-           
+         <%})%>
         </div>
     </div>
 </body>

@@ -3,6 +3,7 @@ import { EventoPeliculaService } from "./evento.service";
 import { EventoPeliculaCreateDto } from "./evento-pelicula-create-dto/evento-pelicula-create.dto";
 import { EventoPeliculaUpdateDto } from "./evento-pelicula-update-dto/evento-pelicula-update.dto";
 import { EventoPeliculaEntity } from "./evento.entity";
+import { EventoEntity } from "src/evento/evento.entity";
 
 @Controller('evento-pelicula')
 
@@ -23,21 +24,16 @@ export class EventoPeliculaController {
     ) {
         return this._eventoPeliculaService.findOne(id);
     }
-    @Get('evento-pelicula')
-    async verEvento(
-        @Res() res
-    ) {
-        
-        res.render('evento-pelicula')
-    }
+    
     @Get('ver-peliculas')
     async ver(
         @Res() res,
     ) {
-        const tamaño = await this._eventoPeliculaService.obtenerMedicamento(1)
+        let tamaño : EventoPeliculaEntity[] 
+        tamaño = await this._eventoPeliculaService.obtenerMedicamento(1)
         console.log(tamaño)
         res.render('ver-pelicula',{
-            tam: tamaño
+            arregloEventoPelicula: tamaño
         })
     }
     @Post('crear')
