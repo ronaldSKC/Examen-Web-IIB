@@ -11,13 +11,25 @@
 
 <body>
     <div class="container">
-        <% const arreglo =['1','2','3']%>
+        <br>
+            <h1>Eventos</h1>
+        <% const arreglo = typeof tam === "undefined"%>
         <div class="row">
-            <% for(let number of arreglo){%>
+           <%= tam.id
+           
+           %>
             <div class="col-sm-4">
-                <%- include('evento-pelicula')%>
+                    <div class="card border-info mb-3" style="max-width: 18rem;">
+                            <div class="card-header">
+                               
+                            </div>
+                            <div class="card-body text-info">
+                              <h5 class="card-title">Info card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                          </div>
             </div>
-            <%}%>
+           
         </div>
     </div>
 </body>

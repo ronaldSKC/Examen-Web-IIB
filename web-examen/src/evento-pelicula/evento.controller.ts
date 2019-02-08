@@ -11,12 +11,12 @@ export class EventoPeliculaController {
     constructor(
         private readonly _eventoPeliculaService: EventoPeliculaService
     ) { }
- 
+
     @Get('buscar')
     findAll() {
         return this._eventoPeliculaService.findAll();
     }
- 
+
     @Get('buscarPorId/:id')
     findOne(
         @Param('id') id
@@ -26,22 +26,20 @@ export class EventoPeliculaController {
     @Get('evento-pelicula')
     async verEvento(
         @Res() res
-    ){
-        const eventoPeliculas = this._eventoPeliculaService.findAll()
-        console.log(eventoPeliculas)
-        const eve = await eventoPeliculas
-        const filter = eve.filter((respuesta)=>{return respuesta.evento.id===1})
-        const tamaño = filter.length
+    ) {
+        
+        res.render('evento-pelicula')
+    }
+    @Get('ver-peliculas')
+    async ver(
+        @Res() res,
+    ) {
+        const tamaño = await this._eventoPeliculaService.obtenerMedicamento(1)
         console.log(tamaño)
-        console.log(filter[0].id)
-        res.render('evento-pelicula',{
-            arreglo: filter,
+        res.render('ver-pelicula',{
             tam: tamaño
         })
     }
-
-
-
     @Post('crear')
     create(
         @Body() eventoPeliculaCrear: EventoPeliculaCreateDto
@@ -55,12 +53,12 @@ export class EventoPeliculaController {
     ) {
         return this._eventoPeliculaService.delete(req.params.id);
     }
- 
+
     @Post('editar/:id')
     editarUno(
         @Param('id') idEventoPelicula,
         @Body() eventoPeliculaEditar: EventoPeliculaUpdateDto
-    ) { 
+    ) {
         return this._eventoPeliculaService.update(idEventoPelicula, eventoPeliculaEditar);
     }
 }
