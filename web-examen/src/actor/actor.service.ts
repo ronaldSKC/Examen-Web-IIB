@@ -24,30 +24,27 @@ export class ActorService {
         return await this._usuarioRepository.findOne(id);
     }
 
-    async findAll() {
-        return await this._usuarioRepository.find();
+    async findAll(parametros?: FindManyOptions<ActorEntity>): Promise<ActorEntity[]> {
+        return await this._usuarioRepository.find(parametros)
     }
-    /*async findAllMovies(parametroBusqueda?: FindManyOptions<ActorEntity>){
-        const actor = await this._usuarioRepository.find(parametroBusqueda);
-        const movies = actor.forEach((movie)=>{movie.pelicula})
-        
-    }*/
+    
     async create(datosCrearActor: EventoCreateDto) {
         return await this._usuarioRepository.save(datosCrearActor)
     }
 
-    async delete(id: number) {
-        return await this._usuarioRepository.delete(id);
+    async delete(idActor: number):Promise<ActorEntity> {
+        const sedeEntityAEliminar = this._usuarioRepository
+        .create({
+            id:idActor
+        })
+        return await this._usuarioRepository.remove(sedeEntityAEliminar);
     } 
 
     
-    async update(id: number, datosEditarActor: ActorUpdateDto) {
-        const editarUsuario = this.findOne(id)
-        if (editarUsuario) {
-            return await this._usuarioRepository.update(id, datosEditarActor)
-        } else {
-            console.log('usuario no econtrado, se lo actualizara')
-        }
+    async update(nuevaMascota: EventoCreateDto): Promise<ActorEntity> {
+
+        const medicamentoEntity = this._usuarioRepository.create(nuevaMascota);
+        return this._usuarioRepository.save(medicamentoEntity)
     }
     
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,35 @@
     <title>Ver Peliculas</title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
 </head>
+
 <body>
     <div class="container">
-
-
-
-
-
-        
+        <br>
+            <h1>Eventos</h1>
+            <div class="row">
+                <a href="">
+                        <button class="btn btn-outline-success"> Regresar</button>
+                </a>
+            </div>
+        <div class="row">
+           <% arregloEventoPelicula.forEach((eventoPelicula)=>{%>
+            <div class="col-sm-4">
+                    <div class="card border-info mb-3" style="max-width: 18rem;">
+                            <div class="card-header">
+                          <%= eventoPelicula.pelicula.nombre%>
+                            </div>
+                            <div class="card-body text-info">
+                              <h5 class="card-title">
+                                  <%= eventoPelicula.pelicula.anioLanzamiento%>
+                              </h5>
+                              <p class="card-text">
+                                  <%= eventoPelicula.pelicula.sinopsis%>
+                              </p>
+                            </div>
+                          </div>
+            </div>
+         <%})%>
+        </div>
     </div>
 </body>
 </html>
