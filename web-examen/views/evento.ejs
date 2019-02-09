@@ -30,35 +30,51 @@
             <div class="row">
             </div>
         </form>
-        <h2>Listado de eventos</h2>
-        <div class="scroll-tabla">
-            <table class="table table-hover animated slideInLeft">
-                <thead>
+        <div>
+            <h2>Listado de Peliculas</h2>
+            <div class="scroll-tabla">
+                <table class="table table-hover animated slideInLeft">
+                    <thead>
                     <tr>
-                        <th>Nombre del Evento</th>
-                        <th>Fecha Acciones</th>
-                        <th></th>
+                        <th>Nombre</th>
+                        <th>Año de Lanzamiento</th>
+                        <th>Rating</th>
+                        <th>Actores Principales</th>
+                        <th>Sinopsis</th>
+                        <th>Actor</th>
                     </tr>
-                </thead>
-                <tbody>
-                    <% arreglo.map( (evento)=> { %>
+                    </thead>
+                    <tbody>
+                    <% arreglo.map( (movie)=> { %>
                     <tr>
                         <td>
-                            <%= evento.nombre%>
+                            <%= movie.nombre%>
                         </td>
                         <td>
-                            <%= evento.fecha%>
+                            <%= movie.anioLanzamiento%>
                         </td>
                         <td>
-                            <a href="/evento/ver-pelicula" class="quitar-link">
-                                <button class="btn btn-outline-info btn-block estaciado-boton">Ver</button>
-                            </a>
+                            <%= movie.rating%>
+                        </td>
+                        <td>
+                            <%= movie.actoresPrincipales%>
+                        </td>
+                        <td>
+                            <%= movie.sinopsis%>
+                        </td>
+                        <td>
+                            <% arregloActores%>
                         </td>
                     </tr>
                     <% }) %>
-                </tbody>
-            </table>
-        </div>
+                    </tbody>
+                </table>
+            </div>
+        <td>
+            <a href="/evento/ver-pelicula" class="quitar-link">
+                <button class="btn btn-outline-info btn-block estaciado-boton">Ver</button>
+            </a>
+        </td>
     </div>
     <script src="/js/jquery.js"></script>
     <script src="/js/popper.js"></script>

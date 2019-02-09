@@ -69,7 +69,7 @@ export class AppController {
 
                     switch (nombreRol) {
                         case 'usuario':
-                            response.redirect('/usuario/crear-usuario');
+                            response.redirect('/evento');
                             break;
                         case 'administrador':
                             response.redirect('/usuario/inicio');
@@ -79,16 +79,9 @@ export class AppController {
                             response.render('login');
 
                     }
-                }else{
-
-//                    response.render('login', {mensaje: 'Datos incorrectos'})
-                  // throw new BadRequestException({mensaje: 'No tiene permisos aunfddf'}); response.render('crear-usuario', {mensaje: 'Datos incorrectos'});
-
                 }
             }  else{
-             //   response.render('login', {mensaje: 'Datos incorrectos'})
-              // response.render('login')
-              //  response.redirect('login?errores=Hay errores');
+
               throw new BadRequestException({mensaje: 'No a tiene permisos aun'});
 
             }
