@@ -69,7 +69,7 @@ export class AppController {
 
                     switch (nombreRol) {
                         case 'usuario':
-                            response.redirect('/evento');
+                            response.redirect('/pelicula/inicio');
                             break;
                         case 'administrador':
                             response.redirect('/usuario/inicio');

@@ -96,8 +96,41 @@ export class PeliculaController {
 
             await this._peliculaService.update(peliculaEditar);
 
-            const parametrosConsulta = `?accion=actualizar&nombre=${peliculaEditar.nombre}`;
+            const parametrosConsulta = `?accion=actualizar&nombre=${peliculaEditar.nombre}` ;
 
             res.redirect('/actor/inicio' + parametrosConsulta);
+    }
+    @Get('inicio')
+    async crearA(
+        @Res() res,
+        @Query('accion') accion: string,
+        @Query('nombre') titulo: string
+    ) {
+        let mensaje = undefined;
+        let clase = undefined;
+        if (accion && titulo) {
+            switch (accion) {
+                case 'borrar':
+                    mensaje = `Registro ${titulo} eliminado`;
+                    clase = 'alert alert-danger';
+                    break;
+                case 'actualizar':
+                    mensaje = `Registro ${titulo} actualizado`;
+                    clase = 'alert alert-info';
+                    break;
+                case 'crear':
+                    mensaje = `Registro ${titulo} creado`;
+                    clase = 'alert alert-success';
+                    break;
+            }
+        }
+        let peliculas: PeliculaEntity[];
+        peliculas = await this._peliculaService.findAll();
+
+        res.render(
+            'pelis', {
+                arregloPeliculas: peliculas // AQUI!
+
+            });
     }
 }
