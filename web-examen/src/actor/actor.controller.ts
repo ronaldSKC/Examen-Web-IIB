@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Res, Post, Body, Delete, Req, Query } from '@nestjs/common';
+import { Controller, Get, Param, Res, Post, Body, Delete, Req, Query, Session } from '@nestjs/common';
 import { ActorService } from './actor.service';
 import { PeliculaEntity } from 'src/pelicula/pelicula.entity';
 import { EventoCreateDto } from './actor-create-dto/actor-create.dto';
@@ -7,6 +7,7 @@ import { PeliculaCreateDto } from 'src/pelicula/pelicula-create-dto/pelicula-cre
 import { Like, FindManyOptions } from 'typeorm';
 import { PeliculaService } from '../pelicula/pelicula.service';
 import { ActorEntity } from './actor.entity';
+import { ActorCreateDto } from 'src/evento/evento-create-dto/evento-create.dto';
 
 @Controller('actor')
 
@@ -28,8 +29,8 @@ export class ActorController {
     ) {
         return this._actorService.findOne(id);
     }
-    @Get('crear-actor')
-    async crearActor(
+    @Get('inicio')
+    async crearA(
         @Res() res,
         @Query('accion') accion: string,
         @Query('nombre') titulo: string
@@ -54,17 +55,19 @@ export class ActorController {
         }
         let peliculas: PeliculaEntity[];
         peliculas = await this._peliculaService.findAll();
-        const actores = peliculas.forEach((act)=>{act.actor})
-        console.log(peliculas)
+        let actores: ActorEntity[];
+        actores = await this._actorService.findAll()
         res.render(
-            'crear-actor', {
-                arreglo: peliculas, // AQUI!
+            'lista-actores', {
+                arregloPeliculas: peliculas, // AQUI!
                 arregloActores: actores,
-                booleano: false,
-                mensaje: mensaje,
-                clase: clase,
-                titulo: "Crear Actor"
             });
+    }
+    @Get('crear-actor')
+    async crearActor(
+        @Res() res,
+    ) {
+        res.render('crear-actor');
     }
     @Post('crear-actor')
     create(
@@ -78,22 +81,67 @@ export class ActorController {
             numeroPeliculas: Number(actorCrear.numeroPeliculas),
             retirado: Boolean(actorCrear.retirado),
         };
-        res.redirect("/evento/crear-evento")
-        return this._actorService.create(actorCrearNew);
+        this._actorService.create(actorCrearNew);
+        const parametrosConsulta = `?accion=crear&nombre=${actorCrear.nombres}`;
+        res.redirect('/actor/inicio' +parametrosConsulta)
+
     }
 
-    @Delete('eliminar/:id')
-    eliminarUno(
-        @Req() req,
+    @Post('eliminar-actor/:id')
+    async eliminar(
+        @Param('id') idActor: string,
+        @Res() res
     ) {
-        return this._actorService.delete(req.params.id);
-    }
+        const sedeEncontrada = await this._actorService
+            .findOne(+idActor);
 
-    @Post('editar/:id')
-    editarUno(
+        await this._actorService.delete(Number(idActor));
+
+        const parametrosConsulta = `?accion=borrar&nombre=${sedeEncontrada.nombres}`;
+
+        res.redirect('/actor/inicio' + parametrosConsulta);
+    }
+    @Get('actualizar-actor/:id')
+    async actualizarEvento(
+        @Param('id') idActor: string,
+        @Res() response,
+        @Query('error') error: string,
+        @Session() sesion
+    ) {
+            let mensaje = undefined;
+            if (error) {
+                mensaje = "Datos erroneos";
+            }
+            const actorActualizar = await this._actorService
+                .findOne(Number(idActor));
+            response.render(
+                'crear-actor', {//ir a la pantalla de crear-usuario
+                    actor: actorActualizar,
+                    mensaje: mensaje,
+                    id: idActor,
+                }
+            )
+    }
+    @Post('actualizar-actor/:id')
+    async editarUno(
         @Param('id') idActor,
-        @Body() actorEditar: ActorUpdateDto,
+        @Res() res,
+        @Body() actorEditar: EventoCreateDto,
     ) {
-        return this._actorService.update(idActor, actorEditar);
+        
+        const actorCrearNew = {
+            id : +idActor,
+            nombres: actorEditar.nombres,
+            apellidos: actorEditar.apellidos,
+            fechaNacimiento: actorEditar.fechaNacimiento,
+            numeroPeliculas: Number(actorEditar.numeroPeliculas),
+            retirado: Boolean(actorEditar.retirado),
+        };
+
+            await this._actorService.update(actorCrearNew);
+
+            const parametrosConsulta = `?accion=actualizar&nombre=${actorEditar.nombres}`;
+
+            res.redirect('/actor/inicio' + parametrosConsulta);
     }
 }

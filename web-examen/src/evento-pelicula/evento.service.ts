@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
-import { Repository } from "typeorm";
+import { Repository, FindManyOptions } from "typeorm";
 import { EventoPeliculaEntity } from "./evento.entity";
 import { EventoPeliculaCreateDto } from "./evento-pelicula-create-dto/evento-pelicula-create.dto";
 import { EventoPeliculaUpdateDto } from "./evento-pelicula-update-dto/evento-pelicula-update.dto";
@@ -14,8 +14,19 @@ export class EventoPeliculaService {
         @InjectRepository(EventoPeliculaEntity)
         private readonly _eventoPeliculaRepository: Repository<EventoPeliculaEntity>
     ) { }
+    
+    async obtenerMedicamento(idEvento: number): Promise<EventoPeliculaEntity[]> {
 
+        const consulta: FindManyOptions<EventoPeliculaEntity> = {
+            where: {
+                evento: idEvento,
+            },
+            relations:['pelicula']
+        };
+        return await this._eventoPeliculaRepository.find(consulta);
+    }
     async findOne(id: number) {
+        
         return await this._eventoPeliculaRepository.findOne(id);
     }
 

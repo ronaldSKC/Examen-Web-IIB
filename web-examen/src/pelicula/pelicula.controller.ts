@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post, Body, Delete, Req, BadRequestException, Put, Res } from "@nestjs/common";
+import { Controller, Get, Param, Post, Body, Delete, Req, BadRequestException, Put, Res, Query, Session } from "@nestjs/common";
 import { PeliculaService } from "./pelicula.service";
 import { PeliculaCreateDto } from "./pelicula-create-dto/pelicula-create.dto";
 import { PeliculaUpdateDto } from "./pelicula-update-dto/pelicula-update.dto";
@@ -35,7 +35,7 @@ export class PeliculaController {
         let pelicula: ActorEntity[]
         pelicula= await this._actorService.findAll()
         res.render('crear-pelicula',{
-            arreglo: pelicula
+            arregloActores: pelicula
         })
         
     }   
@@ -44,22 +44,60 @@ export class PeliculaController {
         @Body() peliculaCrear: PeliculaCreateDto,
         @Res() res
     ) {
-        res.redirect("/actor/crear-actor")
+        res.redirect("/actor/inicio")
         return this._peliculaService.create(peliculaCrear)
     }
 
-    @Delete('eliminar/:id')
-    eliminarUno(
-        @Req() req
+    @Post('eliminar-pelicula/:id')
+    async eliminar(
+        @Param('id') idPelicula: string,
+        @Res() res
     ) {
-        return this._peliculaService.delete(req.params.id)
+        const sedeEncontrada = await this._peliculaService
+            .findOne(+idPelicula);
+
+        await this._peliculaService.delete(Number(idPelicula));
+
+        const parametrosConsulta = `?accion=borrar&nombre=${sedeEncontrada.nombre}`;
+
+        res.redirect('/actor/inicio' + parametrosConsulta);
     }
- 
-    @Post('editar/:id')
-    editarUno(
+    @Get('actualizar-pelicula/:id')
+    async actualizarEvento(
+        @Param('id') idPelicula: string,
+        @Res() response,
+        @Query('error') error: string,
+        @Session() sesion
+    ) {
+            let mensaje = undefined;
+            if (error) {
+                mensaje = "Datos erroneos";
+            }
+            const peliculaActualizar = await this._peliculaService
+                .findOne(Number(idPelicula));
+                let pelicula: ActorEntity[]
+                pelicula= await this._actorService.findAll()    
+            response.render(
+                'crear-pelicula', {//ir a la pantalla de crear-usuario
+                    pelicula: peliculaActualizar,
+                    mensaje: mensaje,
+                    id: idPelicula,
+                    arregloActores: pelicula
+                }
+            )
+    }
+    @Post('actualizar-pelicula/:id')
+    async editarUno(
         @Param('id') idPelicula,
-        @Body() peliculaEditar: PeliculaUpdateDto
-    ) { 
-        return this._peliculaService.update(idPelicula, peliculaEditar)    
+        @Res() res,
+        @Body() peliculaEditar: PeliculaCreateDto,
+    ) {
+        peliculaEditar.id = +idPelicula;
+
+            await this._peliculaService.update(peliculaEditar);
+
+            const parametrosConsulta = `?accion=actualizar&nombre=${peliculaEditar.nombre}`;
+
+            res.redirect('/actor/inicio' + parametrosConsulta);
     }
 }
