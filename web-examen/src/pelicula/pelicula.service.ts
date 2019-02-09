@@ -22,7 +22,7 @@ export class PeliculaService {
         return await this._peliculaRepository.findOne(id);
     }
 
-    async findAll(parametrosConsulta?:FindManyOptions<PeliculaEntity>):Promise<PeliculaEntity[]> {      
+    async findAll(parametrosConsulta?:FindManyOptions<PeliculaEntity>):Promise<PeliculaEntity[]> {
         return await this._peliculaRepository.find(parametrosConsulta);
     }
 
@@ -32,18 +32,17 @@ export class PeliculaService {
 
     async delete(idActor: number):Promise<PeliculaEntity> {
         const sedeEntityAEliminar = this._peliculaRepository
-        .create({
-            id:idActor
-        })
+            .create({
+                id:idActor
+            })
         return await this._peliculaRepository.remove(sedeEntityAEliminar);
-    } 
+    }
 
-    
+
     async update(nuevaMascota: PeliculaCreateDto): Promise<PeliculaEntity> {
 
         const medicamentoEntity = this._peliculaRepository.create(nuevaMascota);
         return this._peliculaRepository.save(medicamentoEntity)
     }
-    
+
 }
- 

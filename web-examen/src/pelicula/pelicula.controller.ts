@@ -5,6 +5,9 @@ import { PeliculaUpdateDto } from "./pelicula-update-dto/pelicula-update.dto";
 import { PeliculaEntity } from "./pelicula.entity";
 import { ActorService } from "src/actor/actor.service";
 import { ActorEntity } from "src/actor/actor.entity";
+import {EventoEntity} from '../evento/evento.entity';
+import {FindManyOptions, Like} from 'typeorm';
+import {UsuarioEntity} from '../usuario/usuario.entity';
 
 
 
@@ -100,14 +103,34 @@ export class PeliculaController {
 
             res.redirect('/actor/inicio' + parametrosConsulta);
     }
-    @Get('inicio')
+    @Get('inicio-pelis')
     async crearA(
         @Res() res,
         @Query('accion') accion: string,
-        @Query('nombre') titulo: string
+        @Query('nombre') titulo: string,
+        @Query('busqueda') busqueda: string
+
     ) {
         let mensaje = undefined;
         let clase = undefined;
+        let peliculas: PeliculaEntity[];
+        if (busqueda) {
+
+            const consulta: FindManyOptions<PeliculaEntity> = {
+                where: [
+                    {
+                        nombre: Like(`%${busqueda}%`)
+                    }
+                ]
+            };
+
+            peliculas = await this._peliculaService.findAll(consulta);
+        } else {
+
+            peliculas = await this._peliculaService.findAll();
+        }
+
+
         if (accion && titulo) {
             switch (accion) {
                 case 'borrar':
@@ -124,8 +147,8 @@ export class PeliculaController {
                     break;
             }
         }
-        let peliculas: PeliculaEntity[];
-        peliculas = await this._peliculaService.findAll();
+
+
 
         res.render(
             'pelis', {
@@ -133,4 +156,6 @@ export class PeliculaController {
 
             });
     }
+
+
 }

@@ -30,7 +30,7 @@ export class ActorController {
         return this._actorService.findOne(id);
     }
     @Get('inicio')
-    async crearb(
+    async crearA(
         @Res() res,
         @Query('accion') accion: string,
         @Query('nombre') titulo: string
