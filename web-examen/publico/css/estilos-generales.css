@@ -1,6 +1,9 @@
 .espaciado-busqueda{
     margin-top: 31px;
 }
+.espaciado-busquedaderecha{
+    margin-right: 100px;
+}
 .quitar-link:hover{
     text-decoration: none;
 }

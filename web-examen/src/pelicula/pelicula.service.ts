@@ -22,9 +22,7 @@ export class PeliculaService {
         return await this._peliculaRepository.findOne(id);
     }
 
-    async findAll(parametrosConsulta?:FindManyOptions<PeliculaEntity>):Promise<PeliculaEntity[]> {
-        const prueba = JSON.stringify(await this._peliculaRepository.find(parametrosConsulta))
-        
+    async findAll(parametrosConsulta?:FindManyOptions<PeliculaEntity>):Promise<PeliculaEntity[]> {      
         return await this._peliculaRepository.find(parametrosConsulta);
     }
 
@@ -32,18 +30,19 @@ export class PeliculaService {
         return await this._peliculaRepository.save(datosCrearPelicula)
     }
 
-    async delete(id: number) {
-        return await this._peliculaRepository.delete(id);
+    async delete(idActor: number):Promise<PeliculaEntity> {
+        const sedeEntityAEliminar = this._peliculaRepository
+        .create({
+            id:idActor
+        })
+        return await this._peliculaRepository.remove(sedeEntityAEliminar);
     } 
 
     
-    async update(id: number, datosEditarPelicula: PeliculaUpdateDto) {
-        const editarUsuario = this.findOne(id)
-        if (editarUsuario) {
-            return await this._peliculaRepository.update(id, datosEditarPelicula)
-        } else {
-            console.log('pelicula no econtrada, no se lo actualizara')
-        }
+    async update(nuevaMascota: PeliculaCreateDto): Promise<PeliculaEntity> {
+
+        const medicamentoEntity = this._peliculaRepository.create(nuevaMascota);
+        return this._peliculaRepository.save(medicamentoEntity)
     }
     
 }
